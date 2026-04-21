@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#eef4fc"/>
+  <g fill="#1f2937" opacity="0.16">
+    <rect x="60"  y="200" width="120" height="130" rx="4"/>
+    <rect x="200" y="160" width="120" height="170" rx="4"/>
+    <rect x="340" y="180" width="120" height="150" rx="4"/>
+    <rect x="480" y="150" width="100" height="180" rx="4"/>
+  </g>
+  <text x="320" y="340" text-anchor="middle" font-family="Manrope, sans-serif" font-size="14" font-weight="600" fill="#4b5563" letter-spacing="3">※ 会場イメージ（差し替え予定）</text>
+  <text x="320" y="110" text-anchor="middle" font-family="Noto Sans JP, Hiragino Kaku Gothic ProN, sans-serif" font-size="30" font-weight="800" fill="#1f2937" letter-spacing="4">高崎経済大学 7号館</text>
+</svg>

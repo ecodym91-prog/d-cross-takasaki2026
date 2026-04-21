@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" role="img" aria-label="D-CROSS TAKASAKI 2026">
+  <defs>
+    <linearGradient id="gMulti" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#1f6fd4"/>
+      <stop offset="30%" stop-color="#2d8659"/>
+      <stop offset="55%" stop-color="#f5b924"/>
+      <stop offset="80%" stop-color="#e87722"/>
+      <stop offset="100%" stop-color="#c6357a"/>
+    </linearGradient>
+  </defs>
+  <!-- × モチーフ -->
+  <g transform="translate(20,20)">
+    <rect x="-4" y="35" width="90" height="8" rx="2" fill="url(#gMulti)" transform="rotate(35,41,39)"/>
+    <rect x="-4" y="35" width="90" height="8" rx="2" fill="url(#gMulti)" transform="rotate(-35,41,39)"/>
+    <circle cx="78" cy="20" r="4" fill="#1f6fd4"/>
+    <circle cx="12" cy="12" r="3" fill="#f5b924"/>
+    <circle cx="72" cy="66" r="3.2" fill="#c6357a"/>
+    <circle cx="10" cy="68" r="3.6" fill="#2d8659"/>
+    <circle cx="42" cy="2" r="2.4" fill="#e87722"/>
+  </g>
+  <!-- 文字 -->
+  <text x="130" y="62" font-family="Manrope, Montserrat, sans-serif" font-size="38" font-weight="800" fill="#111827" letter-spacing="2">D-CROSS</text>
+  <text x="130" y="92" font-family="Manrope, Montserrat, sans-serif" font-size="16" font-weight="600" fill="#4b5563" letter-spacing="6">TAKASAKI 2026</text>
+</svg>
