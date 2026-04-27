@@ -2713,9 +2713,36 @@ footer .footer-akatsuki-link a:hover {
   color: var(--white) !important;
 }
 
-/* PROGRAM 旧 banner / approach-cards を非表示（HTMLからは除去済） */
+/* PROGRAM 旧 banner / approach-cards / 独立ABOUTセクション を非表示 */
 .program-banner,
-.approach-cards { display: none !important; }
+.approach-cards,
+.about-section { display: none !important; }
+
+/* PROGRAM intro（旧ABOUTを統合・visual + text 2-column） */
+.program-intro {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 8px;
+}
+.program-intro-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.program-intro-text p {
+  font-size: 16px;
+  line-height: 2.0;
+  color: var(--text);
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+.program-intro-text p:last-child { margin-bottom: 0; }
+@media (max-width: 900px) {
+  .program-intro { grid-template-columns: 1fr; gap: 24px; }
+}
 
 /* PROGRAM "NOT × IS" 対比ステートメント */
 .program-statement {
