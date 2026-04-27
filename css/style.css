@@ -2713,22 +2713,102 @@ footer .footer-akatsuki-link a:hover {
   color: var(--white) !important;
 }
 
-/* MERIT 交互レイアウト（ASHIOTO縦並びから zigzag へ） */
-.merit-item {
-  transition: background 0.3s, border-color 0.3s;
+/* MERIT 旧 accordion 型を廃止 */
+.merit-item { display: none !important; }
+
+/* MERIT 雑誌特集風（5パートスプレッド・常時展開） */
+.merits-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 32px;
 }
-.merit-item:nth-child(even) {
-  flex-direction: row-reverse;
-  background: linear-gradient(135deg, #f6f2fb 0%, #fff 100%);
-  border-color: rgba(198,53,122,0.15);
+.merit-feature {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 36px;
+  padding: 56px 0 60px;
+  border-top: 1px solid var(--gray-border);
+  align-items: flex-start;
+  position: relative;
 }
-.merit-item:nth-child(odd) {
-  background: linear-gradient(135deg, #eef4fc 0%, #fff 100%);
-  border-color: rgba(31,111,212,0.15);
+.merit-feature:last-child {
+  border-bottom: 1px solid var(--gray-border);
 }
-.merit-item:nth-child(even) .merit-icon {
-  background: linear-gradient(135deg, #fbeef3 0%, #f6f2fb 100%);
+.merit-feature::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 44px;
+  height: 2px;
+  background: var(--gradient);
 }
-.merit-item:nth-child(odd) .merit-icon {
-  background: linear-gradient(135deg, #eef4fc 0%, #dce8fa 100%);
+.merit-feature-num {
+  font-family: var(--font-en);
+  font-size: 124px;
+  font-weight: 900;
+  line-height: 0.9;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+  user-select: none;
+}
+.merit-feature-body {
+  padding-top: 14px;
+}
+.merit-feature-tag {
+  display: inline-block;
+  font-family: var(--font-en);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  color: var(--dc-magenta);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.merit-feature h5 {
+  font-family: var(--font-ja);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--black);
+  line-height: 1.65;
+  margin-bottom: 18px;
+  letter-spacing: 0.04em;
+}
+.merit-feature h5 strong {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+.merit-feature-text {
+  font-size: 14.5px;
+  line-height: 2.05;
+  color: var(--text);
+  font-weight: 500;
+}
+.merit-feature .merit-inline-note {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-light);
+  margin-left: 4px;
+  vertical-align: middle;
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+@media (max-width: 900px) {
+  .merit-feature { grid-template-columns: 1fr; gap: 8px; padding: 40px 0 44px; }
+  .merit-feature-num { font-size: 80px; line-height: 1; }
+  .merit-feature h5 { font-size: 18px; }
+  .merit-feature-body { padding-top: 0; }
+}
+@media (max-width: 540px) {
+  .merit-feature-num { font-size: 64px; }
+  .merit-feature h5 { font-size: 16px; }
+  .merit-feature-text { font-size: 13.5px; line-height: 1.95; }
 }
