@@ -2713,6 +2713,103 @@ footer .footer-akatsuki-link a:hover {
   color: var(--white) !important;
 }
 
+/* PROGRAM 旧 banner / approach-cards を非表示（HTMLからは除去済） */
+.program-banner,
+.approach-cards { display: none !important; }
+
+/* PROGRAM "NOT × IS" 対比ステートメント */
+.program-statement {
+  display: grid;
+  grid-template-columns: 1fr 1.7fr;
+  gap: 56px;
+  margin: 56px 0 64px;
+  padding: 56px 0;
+  border-top: 1px solid var(--gray-border);
+  border-bottom: 1px solid var(--gray-border);
+  position: relative;
+}
+.program-statement::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 56px;
+  height: 2px;
+  background: var(--gradient);
+}
+.program-stamp-label {
+  display: inline-block;
+  font-family: var(--font-en);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5em;
+  color: var(--gray);
+  margin-bottom: 18px;
+  padding: 4px 12px;
+  border: 1px solid var(--gray-border);
+  background: var(--white);
+}
+.program-stamp-label--is {
+  color: var(--white);
+  background: var(--dc-blue);
+  border-color: var(--dc-blue);
+  letter-spacing: 0.6em;
+  padding-left: 16px;
+}
+.program-not-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.program-not-list li {
+  font-family: var(--font-ja);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-light);
+  line-height: 2.2;
+  text-decoration: line-through;
+  text-decoration-color: rgba(160,160,160,0.55);
+  text-decoration-thickness: 1px;
+  letter-spacing: 0.04em;
+}
+.program-not-list .dc-x {
+  display: inline-block;
+  margin-right: 10px;
+  color: var(--dc-magenta);
+  font-weight: 300;
+  font-size: 22px;
+  text-decoration: none;
+  vertical-align: -2px;
+  line-height: 1;
+}
+.program-is-text {
+  font-family: var(--font-ja);
+  font-size: 19px;
+  line-height: 2.05;
+  color: var(--text);
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+.program-is-text strong {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+.program-is-sub {
+  font-size: 14px;
+  line-height: 1.95;
+  color: var(--text-light);
+  font-weight: 500;
+  padding-top: 14px;
+  border-top: 1px dashed var(--gray-border);
+}
+@media (max-width: 900px) {
+  .program-statement { grid-template-columns: 1fr; gap: 28px; padding: 40px 0; }
+  .program-is-text { font-size: 17px; }
+}
+
 /* MERIT 旧 accordion 型を廃止 */
 .merit-item { display: none !important; }
 
