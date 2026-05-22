@@ -2211,15 +2211,15 @@ header { height: 84px; }
 .cta-deadline-time { color: var(--dc-blue); }
 .cta-warning { color: var(--dc-magenta); border-top-color: rgba(198,53,122,0.3); }
 
-/* ===== FOOTER ===== */
+/* ===== FOOTER (lightened: D-CROSSロゴ + AKATSUKIロゴが自然に見えるトーン) ===== */
 footer {
-  background: #1a1f2e;
-  color: #e5e8ef;
+  background: var(--bg-base);
+  color: var(--text);
 }
 footer .footer-info-title {
-  color: #fff;
+  color: var(--black);
   font-family: var(--font-en);
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
 }
 footer .footer-office-name,
 footer .footer-office-label,
@@ -2227,20 +2227,23 @@ footer .footer-office-mail,
 footer .footer-office-link,
 footer .footer-note,
 footer .footer-akatsuki-link {
-  color: #c7cad3;
+  color: var(--text);
 }
 footer .footer-office-mail a,
 footer .footer-office-link a,
 footer .footer-akatsuki-link a {
-  color: #e5e8ef;
+  color: var(--dc-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 footer .footer-office-mail a:hover,
 footer .footer-office-link a:hover,
 footer .footer-akatsuki-link a:hover {
-  color: var(--dc-yellow);
+  color: var(--dc-magenta);
 }
-.footer-bottom { border-top-color: rgba(255,255,255,0.08); }
-.footer-akatsuki-img { filter: brightness(0) invert(1) opacity(0.85); }
+.footer-bottom { border-top-color: var(--gray-border); }
+/* AKATSUKIロゴは原本のまま表示する（白塗りfilter解除） */
+.footer-akatsuki-img { filter: none; }
 
 /* ===== RESPONSIVE tweaks ===== */
 @media (max-width: 900px) {
