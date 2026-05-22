@@ -3541,3 +3541,143 @@ footer .footer-akatsuki-link a:hover {
   .schedule-venues li { font-size: 12.5px; }
   .venue-key { display: block; margin-bottom: 2px; }
 }
+
+/* ===== THE SIX (PM) — 3×2 グリッド + 01-06 ナンバリング ===== */
+.pm-grid-six {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px 28px;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+  flex: unset !important;
+}
+.pm-grid-six .pm-card {
+  flex: unset !important;
+  max-width: unset !important;
+  position: relative;
+  padding-top: 12px;
+}
+.pm-num {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-en);
+  font-size: 32px;
+  font-weight: 900;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  user-select: none;
+  z-index: 1;
+}
+.pm-grid-six .pm-photo {
+  width: 130px;
+  height: 130px;
+  margin-top: 14px;
+}
+@media (max-width: 900px) {
+  .pm-grid-six { grid-template-columns: repeat(2, 1fr); gap: 32px 20px; }
+}
+@media (max-width: 540px) {
+  .pm-grid-six { grid-template-columns: 1fr; gap: 36px; }
+  .pm-num { font-size: 26px; }
+}
+
+/* PMセクション説明文の強調語をグラデで */
+.pm-section-desc strong {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+/* ===== PARTNERSHIP（連携2団体）===== */
+.partnership-section {
+  padding: 100px 24px;
+  background: var(--gray-light);
+}
+.partnership-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.partnership-lead {
+  max-width: 720px;
+  margin: 28px auto 48px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 2;
+  color: var(--text);
+  font-weight: 500;
+}
+.partnership-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 840px;
+  margin: 0 auto;
+}
+.partnership-card {
+  background: var(--white);
+  border: 1px solid var(--gray-border);
+  padding: 36px 32px 32px;
+  position: relative;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.partnership-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--dc-blue);
+  box-shadow: 0 12px 32px rgba(31,111,212,0.10);
+}
+.partnership-card-role {
+  display: inline-block;
+  font-family: var(--font-en);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  color: var(--dc-magenta);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.partnership-card-name {
+  font-family: var(--font-ja);
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--black);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+.partnership-card-note {
+  font-size: 13.5px;
+  line-height: 1.95;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+.partnership-card-link {
+  display: inline-block;
+  font-family: var(--font-en);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--dc-blue);
+  border-bottom: 1px solid var(--dc-blue);
+  padding-bottom: 2px;
+  transition: gap 0.3s ease;
+}
+.partnership-card-link:hover {
+  color: var(--dc-magenta);
+  border-bottom-color: var(--dc-magenta);
+}
+@media (max-width: 720px) {
+  .partnership-cards { grid-template-columns: 1fr; gap: 20px; }
+  .partnership-card { padding: 28px 24px; }
+}
+
+/* 旧 consortium 系は不使用に */
+.consortium-section { display: none !important; }
