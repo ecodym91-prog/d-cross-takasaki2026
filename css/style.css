@@ -3090,3 +3090,161 @@ footer .footer-akatsuki-link a:hover {
   .merit-feature h5 { font-size: 16px; }
   .merit-feature-text { font-size: 13.5px; line-height: 1.95; }
 }
+
+/* ============================================================ */
+/* ===== SCHEDULE 横一列 3カラム（PCはgrid・スマホはstack） ====== */
+/* ============================================================ */
+.schedule-horizontal {
+  display: grid;
+  grid-template-columns: 1.1fr 1.3fr 0.7fr;
+  gap: 24px;
+  padding-left: 0 !important;
+  margin-top: 32px;
+  align-items: start;
+}
+.schedule-horizontal::before { display: none !important; }
+.schedule-phase-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+/* phase marker（旧absolute番号→relative・カラム上部の見出しに） */
+.schedule-horizontal .schedule-phase-marker {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin: 0 0 6px;
+  padding: 0;
+  border-bottom: 2px solid var(--dc-blue);
+  padding-bottom: 12px;
+}
+.schedule-horizontal .schedule-phase-num {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: auto;
+  text-align: left;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 900;
+  color: var(--dc-magenta);
+}
+.schedule-horizontal .schedule-phase-content h4 {
+  font-size: 13px;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 2px;
+  letter-spacing: 0.26em;
+}
+.schedule-horizontal .schedule-phase-content p {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+.schedule-phase-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+/* 各item: コンパクトカード化、date-blockは絶対配置を解除して上段に */
+.schedule-horizontal .schedule-item {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--gray-border);
+  border-radius: 0;
+  background: var(--white);
+  gap: 0;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+.schedule-horizontal .schedule-item:hover {
+  border-color: var(--dc-blue);
+  box-shadow: 0 6px 18px rgba(31,111,212,0.10);
+  transform: translateY(-2px);
+}
+.schedule-horizontal .schedule-item::before { display: none !important; }
+.schedule-horizontal .schedule-item.active {
+  border-color: var(--dc-magenta);
+  border-left: 4px solid var(--dc-magenta);
+  padding-left: 13px;
+}
+
+.schedule-horizontal .schedule-date-block {
+  position: relative;
+  left: 0; top: 0;
+  width: auto;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--gray-border);
+}
+.schedule-horizontal .schedule-day-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 8px;
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+.schedule-horizontal .schedule-date {
+  font-family: var(--font-en);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+.schedule-horizontal .schedule-date strong {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--dc-blue);
+  margin: 0 1px;
+}
+.schedule-horizontal .schedule-date small {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-light);
+  margin-left: 3px;
+}
+.schedule-horizontal .schedule-content h3 {
+  font-size: 13.5px;
+  font-weight: 800;
+  line-height: 1.5;
+  margin-bottom: 4px;
+  color: var(--black);
+  letter-spacing: 0.02em;
+}
+.schedule-horizontal .schedule-content p {
+  font-size: 11.5px;
+  line-height: 1.7;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* タブレット〜小型PC：3列 → 2列にしてDEMOは下段に伸びる */
+@media (max-width: 1100px) {
+  .schedule-horizontal { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .schedule-phase-column:last-child { grid-column: 1 / -1; }
+  .schedule-phase-column:last-child .schedule-phase-items { max-width: 60%; }
+}
+
+/* スマホ：完全縦stack */
+@media (max-width: 720px) {
+  .schedule-horizontal { grid-template-columns: 1fr; gap: 28px; }
+  .schedule-phase-column:last-child .schedule-phase-items { max-width: 100%; }
+  .schedule-horizontal .schedule-phase-num { font-size: 30px; }
+  .schedule-horizontal .schedule-content h3 { font-size: 14px; }
+  .schedule-horizontal .schedule-content p { font-size: 12.5px; }
+}
