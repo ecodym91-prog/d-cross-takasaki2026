@@ -507,7 +507,7 @@
         <a href="#" class="pm-detail">プロフィール詳細</a>
       </div>
       <div class="pm-card" data-pm="honda_t">
-        <div class="pm-photo"><span>PHOTO</span></div>
+        <div class="pm-photo"><img src="assets/images/pm/honda_t.jpg" alt="本多 達也"></div>
         <p class="pm-name">本多 達也</p>
         <p class="pm-name-en">Tatsuya HONDA</p>
         <p class="pm-org">富士通株式会社<br>Ontennaプロジェクトリーダー</p>
@@ -895,6 +895,7 @@ var pmData = {
   honda_t: {
     name: '本多 達也', nameEn: 'Tatsuya HONDA',
     org: '富士通株式会社\nOntennaプロジェクトリーダー',
+    photo: 'assets/images/pm/honda_t.jpg',
     bio: '1990年香川県生まれ。博士（芸術工学）。学生時代より手話通訳ボランティア／手話サークル立ち上げ／NPO設立に取り組み、ろう者と協働した音知覚装置の開発を通じて、人間の身体・感覚の拡張をテーマに研究を続ける。Forbes 30 Under 30 Asia 2017／2019年度グッドデザイン金賞／令和4年度全国発明表彰「恩賜発明賞」を受賞。著書に『SDGs時代のソーシャル・イントラプレナーという働き方』（日経BP）。'
   },
   tajima: {
@@ -945,6 +946,12 @@ document.querySelectorAll('.pm-detail').forEach(function(link) {
       if (i > 0) orgEl.appendChild(document.createElement('br'));
       orgEl.appendChild(document.createTextNode(line));
     });
+    var photoEl = document.getElementById('pmModalPhoto');
+    if (data.photo) {
+      photoEl.innerHTML = '<img src="' + data.photo + '" alt="' + data.name + '">';
+    } else {
+      photoEl.innerHTML = '<span>PHOTO</span>';
+    }
     document.getElementById('pmModalBio').textContent = data.bio;
     pmModal.classList.add('open');
     document.body.style.overflow = 'hidden';
