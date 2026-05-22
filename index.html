@@ -299,38 +299,6 @@
         </div>
       </div>
 
-      <div class="req-card">
-        <div class="req-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-            <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/>
-            <circle cx="12" cy="10" r="2.5"/>
-          </svg>
-        </div>
-        <div class="req-card-body">
-          <p class="req-card-label">実施場所</p>
-
-          <table class="req-venue-table">
-            <thead>
-              <tr><th>DAY</th><th>日付</th><th>場所</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>DAY 0</td><td>●.●</td><td>オンライン</td></tr>
-              <tr><td>DAY 1</td><td>2026.8.20(木)</td><td>NTT e-City Labo（東京都調布市）</td></tr>
-              <tr><td>DAY 2</td><td>2026.8.21(金)</td><td>NTT e-City Labo（東京都調布市）</td></tr>
-              <tr><td>DAY 3</td><td>2026.11.1(日)</td><td>高崎経済大学</td></tr>
-              <tr><td>DAY 4</td><td>2026.12月</td><td>オンライン</td></tr>
-              <tr><td>DAY 5</td><td>2027.1.30(土)</td><td>高崎経済大学</td></tr>
-            </tbody>
-          </table>
-
-          <div class="req-venue-addr-list">
-            <p><strong>高崎経済大学</strong>　〒370-0801　群馬県高崎市上並榎町1300</p>
-            <p><strong>NTT 中央研修センタ「NTT e-City Labo」</strong>　東京都調布市</p>
-          </div>
-
-          <p class="req-note-warn">※ 上記の対面日程は基本現地参加が条件です。週次メンタリングはオンライン・現地の併用。</p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -412,7 +380,8 @@
               <span class="schedule-date">●.●<small>●</small></span>
             </div>
             <div class="schedule-content">
-              <h3>オリエンテーション（オンライン）</h3>
+              <h3>オリエンテーション</h3>
+              <p class="schedule-venue" data-venue="online">オンライン</p>
               <p>PM・メンターとの顔合わせ、プログラムの目標設定</p>
             </div>
           </div>
@@ -423,7 +392,8 @@
             </div>
             <div class="schedule-content">
               <h3>キックオフ 1日目（有識者講義・視察）</h3>
-              <p>@ NTT 中央研修センタ内「NTT e-City Labo」（東京都調布市）<br>スマートシティ／都市 DX の社会実装事例を体感、基調講義・参加者交流</p>
+              <p class="schedule-venue" data-venue="tokyo">NTT e-City Labo（東京都調布市）</p>
+              <p>スマートシティ／都市 DX の社会実装事例を体感、基調講義・参加者交流</p>
             </div>
           </div>
           <div class="schedule-item active">
@@ -433,7 +403,8 @@
             </div>
             <div class="schedule-content">
               <h3>キックオフ 2日目（インプット／アウトプット）</h3>
-              <p>@ NTT 中央研修センタ内「NTT e-City Labo」（東京都調布市）<br>現在地点の可視化、PM とのディスカッション、5か月計画の策定</p>
+              <p class="schedule-venue" data-venue="tokyo">NTT e-City Labo（東京都調布市）</p>
+              <p>現在地点の可視化、PM とのディスカッション、5か月計画の策定</p>
             </div>
           </div>
           <div class="schedule-item">
@@ -443,7 +414,8 @@
             </div>
             <div class="schedule-content">
               <h3>中間発表会 <span class="schedule-tag-tentative">予定</span></h3>
-              <p>@ 高崎経済大学　3か月間の成果をアウトプットし、最終成果に向けた計画策定</p>
+              <p class="schedule-venue" data-venue="takasaki">高崎経済大学（群馬県高崎市）</p>
+              <p>3か月間の成果をアウトプットし、最終成果に向けた計画策定</p>
             </div>
           </div>
           <div class="schedule-item">
@@ -453,7 +425,8 @@
             </div>
             <div class="schedule-content">
               <h3>他採択事業プログラムとの連携イベント（仮）</h3>
-              <p>@ オンライン　AKATSUKI 他採択事業との横断交流</p>
+              <p class="schedule-venue" data-venue="online">オンライン</p>
+              <p>AKATSUKI 他採択事業との横断交流</p>
             </div>
           </div>
         </div>
@@ -475,12 +448,22 @@
             </div>
             <div class="schedule-content">
               <h3>デモデイ 最終成果発表会 <span class="schedule-tag-tentative">仮</span></h3>
-              <p>@ 高崎経済大学　デモを交えて5か月間の成果をアウトプットし、プログラム修了</p>
+              <p class="schedule-venue" data-venue="takasaki">高崎経済大学（群馬県高崎市）</p>
+              <p>デモを交えて5か月間の成果をアウトプットし、プログラム修了</p>
             </div>
           </div>
         </div>
       </div>
 
+    </div>
+
+    <div class="schedule-venues fade-in">
+      <p class="schedule-venues-label">対面会場</p>
+      <ul>
+        <li><span class="venue-key venue-key-takasaki">高崎経済大学</span> <span class="venue-addr">〒370-0801　群馬県高崎市上並榎町1300</span></li>
+        <li><span class="venue-key venue-key-tokyo">NTT 中央研修センタ「NTT e-City Labo」</span> <span class="venue-addr">東京都調布市（DAY 1–2 キックオフ合宿）</span></li>
+      </ul>
+      <p class="schedule-venues-note">※ 上記の対面日程は基本現地参加が条件です。週次メンタリングはオンライン・現地の併用。</p>
     </div>
   </div>
 </section>

@@ -3418,3 +3418,112 @@ footer .footer-akatsuki-link a:hover {
   .req-venue-table tbody td { padding: 8px 6px; font-size: 12px; }
   .req-venue-addr-list { padding: 10px 12px; font-size: 12px; }
 }
+
+/* ===== SCHEDULE 各アイテム内の会場タグ ===== */
+.schedule-venue {
+  display: inline-block;
+  font-family: var(--font-en);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 3px 9px 3px 22px;
+  margin: 0 0 8px;
+  border-radius: 0;
+  position: relative;
+}
+.schedule-venue::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  margin-top: -5px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  background: transparent;
+}
+.schedule-venue::after {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  width: 1px;
+  height: 4px;
+  margin-top: 0;
+  background: currentColor;
+}
+.schedule-venue[data-venue="tokyo"] {
+  background: rgba(31,111,212,0.08);
+  color: var(--dc-blue);
+}
+.schedule-venue[data-venue="takasaki"] {
+  background: rgba(198,53,122,0.08);
+  color: var(--dc-magenta);
+}
+.schedule-venue[data-venue="online"] {
+  background: rgba(45,134,89,0.10);
+  color: var(--dc-green);
+}
+.schedule-venue[data-venue="online"]::before {
+  border-color: var(--dc-green);
+  background: var(--dc-green);
+}
+.schedule-venue[data-venue="online"]::after { display: none; }
+
+/* ===== SCHEDULE 末尾：対面会場サマリ ===== */
+.schedule-venues {
+  max-width: 900px;
+  margin: 56px auto 0;
+  padding: 24px 28px;
+  border: 1px solid var(--gray-border);
+  background: var(--white);
+}
+.schedule-venues-label {
+  display: inline-block;
+  font-family: var(--font-en);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.32em;
+  color: var(--white);
+  background: var(--black);
+  padding: 4px 12px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.schedule-venues ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+}
+.schedule-venues li {
+  font-size: 13.5px;
+  line-height: 1.95;
+  color: var(--text);
+  padding: 4px 0;
+}
+.venue-key {
+  display: inline-block;
+  font-weight: 800;
+  color: var(--black);
+  margin-right: 8px;
+}
+.venue-key-takasaki { color: var(--dc-magenta); }
+.venue-key-tokyo { color: var(--dc-blue); }
+.venue-addr {
+  color: var(--text-light);
+  font-size: 12.5px;
+}
+.schedule-venues-note {
+  font-size: 11.5px;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px dashed var(--gray-border);
+}
+@media (max-width: 540px) {
+  .schedule-venues { padding: 18px 16px; }
+  .schedule-venues li { font-size: 12.5px; }
+  .venue-key { display: block; margin-bottom: 2px; }
+}
