@@ -217,6 +217,22 @@ img { max-width: 100%; display: block; }
   border-bottom: 2px solid var(--dc-blue);
   padding-bottom: 1px;
 }
+.hero-meaning {
+  margin: 5mm 0 0 8mm;
+  padding: 3mm 4mm;
+  border-left: 1.5pt solid var(--dc-magenta);
+  background: rgba(198, 53, 122, 0.05);
+  font-family: var(--font-ja);
+  font-size: 8.5pt;
+  font-weight: 500;
+  line-height: 1.75;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+.hero-meaning strong {
+  color: var(--dc-magenta);
+  font-weight: 700;
+}
 
 /* KEY MESSAGE */
 .keymsg {
