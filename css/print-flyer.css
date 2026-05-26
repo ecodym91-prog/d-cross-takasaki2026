@@ -1238,6 +1238,99 @@ img { max-width: 100%; display: block; }
   width: auto !important;
 }
 
+/* ============================================================ */
+/* === SCHEDULE PHASES (4フェーズ横並び・読みやすい新デザイン) === */
+/* ============================================================ */
+.schedule-head {
+  font-family: var(--font-ja);
+  font-size: 11pt;
+  font-weight: 800;
+  color: var(--black);
+  margin: 0 0 3mm;
+  letter-spacing: 0.06em;
+  padding-bottom: 2mm;
+  border-bottom: 1.5pt solid var(--black);
+}
+.schedule-phases {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5mm;
+  margin-bottom: 2.5mm;
+}
+.phase-card {
+  background: var(--white);
+  border: 1px solid var(--gray-border);
+  padding: 4mm 3.5mm 3.5mm;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.phase-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.5pt;
+  background: var(--dc-blue);
+}
+.phase-card--final {
+  background: var(--black);
+  border-color: var(--black);
+}
+.phase-card--final::before { background: var(--dc-magenta); }
+.phase-num {
+  font-family: var(--font-en);
+  font-size: 18pt;
+  font-weight: 900;
+  color: var(--dc-blue);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin-bottom: 1mm;
+}
+.phase-card--final .phase-num { color: var(--dc-magenta); }
+.phase-when {
+  display: block;
+  font-family: var(--font-en);
+  font-size: 7pt;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text-light);
+  margin-bottom: 2.5mm;
+  padding-bottom: 1.5mm;
+  border-bottom: 1px dashed var(--gray-border);
+}
+.phase-card--final .phase-when {
+  color: rgba(255,255,255,0.85);
+  border-bottom-color: rgba(255,255,255,0.25);
+}
+.phase-title {
+  font-family: var(--font-ja);
+  font-size: 10pt;
+  font-weight: 900;
+  color: var(--black);
+  margin: 0 0 1.5mm;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+.phase-card--final .phase-title { color: var(--white); }
+.phase-desc {
+  font-family: var(--font-ja);
+  font-size: 7.5pt;
+  line-height: 1.6;
+  color: var(--text);
+  font-weight: 500;
+  margin: 0;
+}
+.phase-card--final .phase-desc { color: rgba(255,255,255,0.92); }
+.schedule-note {
+  font-size: 7pt;
+  color: var(--text-light);
+  font-weight: 500;
+  margin: 0 0 3mm;
+  letter-spacing: 0.02em;
+}
+
 /* QUALIFY block (back page バージョン): 全幅、QRはBIG CTA側 */
 .qualify-block--back {
   display: block;
