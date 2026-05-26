@@ -1230,12 +1230,13 @@ img { max-width: 100%; display: block; }
 .page-back .big-cta-date { font-size: 12pt !important; }
 .page-back .big-cta-qr-box { width: 22mm !important; height: 22mm !important; }
 
-/* page-back の hosts-band（フッター）も圧縮 */
-.page-back .hosts-band { margin-top: auto !important; }
-.page-back .footer-meta { padding: 2mm 10mm 3mm !important; }
-.page-back .footer-meta .footer-akatsuki img { max-height: 5mm !important; }
-.page-back .footer-meta .footer-contact { font-size: 7pt !important; margin-bottom: 1mm !important; }
-.page-back .footer-meta .footer-note { font-size: 6.5pt !important; line-height: 1.5 !important; margin-bottom: 1mm !important; }
+/* page-back の hosts-band（フッター）は表面と完全同一に：
+   page-back の左右 padding (10mm) を負マージンで打ち消し、全幅で表示。
+   フォント・padding は front 既定値を継承（個別圧縮なし） */
+.page-back .hosts-band {
+  margin: auto -10mm 0 !important;
+  width: auto !important;
+}
 
 /* QUALIFY block (back page バージョン): 全幅、QRはBIG CTA側 */
 .qualify-block--back {
