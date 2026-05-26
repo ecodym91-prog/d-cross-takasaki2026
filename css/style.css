@@ -2408,6 +2408,65 @@ footer .footer-akatsuki-link a:hover {
   .concept-pole h4 { font-size: 22px; }
 }
 
+/* CONCEPT > NAMING ミニブロック（D-CROSS の意味 + 高崎だるま由来） */
+.concept-naming {
+  max-width: 880px;
+  margin: 80px auto 0;
+  padding-top: 48px;
+  border-top: 1px solid var(--gray-border);
+}
+.concept-naming-label {
+  display: inline-block;
+  font-family: var(--font-en);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.32em;
+  color: var(--white);
+  background: var(--black);
+  padding: 5px 14px;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+.concept-naming-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+.concept-naming-item {
+  padding: 0;
+}
+.concept-naming-key {
+  font-family: var(--font-ja);
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--black);
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--dc-blue);
+  display: inline-block;
+  letter-spacing: 0.04em;
+}
+.concept-naming-item:nth-child(2) .concept-naming-key {
+  border-bottom-color: var(--dc-magenta);
+}
+.concept-naming-item p {
+  font-size: 14px;
+  line-height: 2;
+  color: var(--text);
+  font-weight: 500;
+}
+.concept-naming-item p strong {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+@media (max-width: 900px) {
+  .concept-naming-grid { grid-template-columns: 1fr; gap: 28px; }
+  .concept-naming { margin-top: 56px; padding-top: 36px; }
+}
+
 /* FACILITIES — eCity-Labo 紹介を1本化 */
 .facilities-section { background: var(--white); }
 .facilities-block {
