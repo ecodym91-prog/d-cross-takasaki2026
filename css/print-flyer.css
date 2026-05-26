@@ -1205,8 +1205,37 @@ img { max-width: 100%; display: block; }
 .big-cta { padding: 4mm 6mm; }
 .big-cta-body { gap: 6mm; }
 
-/* page-back の最後 (BIG CTA) を確実にページ内に収める */
-.page-back > *:last-child { margin-bottom: 6mm; }
+/* page-back: フッター追加に伴う再圧縮（footer が見切れないように） */
+.page-back {
+  padding: 6mm 10mm 0 !important;
+  gap: 0 !important;
+}
+.page-back .back-heading { margin-bottom: 2.5mm !important; }
+.page-back .back-heading-ja { font-size: 16pt !important; }
+.page-back .lead-box { margin-bottom: 2.5mm !important; }
+.page-back .lead-box-text { font-size: 10pt !important; line-height: 1.7 !important; }
+.page-back .merits { margin-bottom: 2.5mm !important; }
+.page-back .merits-head { font-size: 10pt !important; margin-bottom: 2mm !important; }
+.page-back .merit-row { padding: 1.2mm 0 !important; }
+.page-back .merit-text { font-size: 8.5pt !important; line-height: 1.55 !important; }
+.page-back .timeline { margin-bottom: 2.5mm !important; }
+.page-back .tl-text { font-size: 8pt !important; line-height: 1.5 !important; }
+.page-back .qualify-block { margin-bottom: 2.5mm !important; }
+.page-back .qualify-block--back .qualify-text { padding: 2.5mm 4mm !important; }
+.page-back .qualify-block--back .qualify-list li { padding: 0.8mm 0 !important; font-size: 7.5pt !important; }
+.page-back .big-cta { padding: 3mm 5mm !important; margin-bottom: 2mm !important; }
+.page-back .big-cta-body { gap: 4mm !important; }
+.page-back .big-cta-title { font-size: 14pt !important; }
+.page-back .big-cta-deadline { font-size: 9pt !important; }
+.page-back .big-cta-date { font-size: 12pt !important; }
+.page-back .big-cta-qr-box { width: 22mm !important; height: 22mm !important; }
+
+/* page-back の hosts-band（フッター）も圧縮 */
+.page-back .hosts-band { margin-top: auto !important; }
+.page-back .footer-meta { padding: 2mm 10mm 3mm !important; }
+.page-back .footer-meta .footer-akatsuki img { max-height: 5mm !important; }
+.page-back .footer-meta .footer-contact { font-size: 7pt !important; margin-bottom: 1mm !important; }
+.page-back .footer-meta .footer-note { font-size: 6.5pt !important; line-height: 1.5 !important; margin-bottom: 1mm !important; }
 
 /* QUALIFY block (back page バージョン): 全幅、QRはBIG CTA側 */
 .qualify-block--back {
