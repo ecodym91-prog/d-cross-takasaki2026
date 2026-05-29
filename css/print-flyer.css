@@ -1561,3 +1561,80 @@ img { max-width: 100%; display: block; }
   color: var(--text);
 }
 
+/* ============================================ */
+/* BACK CTA: 裏面 FAQ とフッターの間 / QR 付き */
+/* ============================================ */
+.back-cta {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 6mm !important;
+  margin: 4mm 0 3mm !important;
+  padding: 4mm 6mm !important;
+  background: linear-gradient(135deg, #f5f9ff 0%, #fff5f9 100%) !important;
+  border: 1.2px solid var(--dc-blue) !important;
+  border-radius: 2mm !important;
+}
+.back-cta-text {
+  flex: 1 1 auto !important;
+}
+.back-cta-lead {
+  margin: 0 0 1mm !important;
+  font-family: var(--font-en) !important;
+  font-size: 8pt !important;
+  font-weight: 800 !important;
+  color: var(--dc-magenta) !important;
+  letter-spacing: 0.22em !important;
+  line-height: 1 !important;
+}
+.back-cta-main {
+  margin: 0 0 1mm !important;
+  font-family: var(--font-ja) !important;
+  font-size: 13pt !important;
+  font-weight: 800 !important;
+  color: var(--text) !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.3 !important;
+}
+.back-cta-main strong {
+  color: var(--dc-blue) !important;
+  border-bottom: 1.5px solid var(--dc-blue) !important;
+}
+.back-cta-sub {
+  margin: 0 !important;
+  font-family: var(--font-ja) !important;
+  font-size: 8pt !important;
+  font-weight: 500 !important;
+  color: var(--text-light) !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.3 !important;
+}
+.back-cta-qr {
+  flex-shrink: 0 !important;
+  width: 22mm !important;
+  text-align: center !important;
+}
+.back-cta-qr .qr-box {
+  width: 22mm !important;
+  height: 22mm !important;
+  background: var(--white) !important;
+  border: 1px solid var(--black) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: var(--font-en) !important;
+  font-size: 8pt !important;
+  font-weight: 700 !important;
+  color: var(--text-light) !important;
+  letter-spacing: 0.1em !important;
+}
+.back-cta-qr .qr-label {
+  margin: 1mm 0 0 !important;
+  font-family: var(--font-ja) !important;
+  font-size: 6.5pt !important;
+  font-weight: 600 !important;
+  color: var(--text) !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.2 !important;
+}
+
