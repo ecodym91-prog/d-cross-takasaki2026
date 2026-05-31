@@ -3125,19 +3125,16 @@ footer .footer-akatsuki-link a:hover {
 }
 .merit-feature h5 {
   font-family: var(--font-ja);
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 800;
   color: var(--black);
-  line-height: 1.65;
+  line-height: 1.55;
   margin-bottom: 18px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
-/* 1行表示用 modifier: デスクトップでは縮小して nowrap で1行強制、モバイルは通常 */
+/* 1行表示用 modifier: デスクトップでは nowrap で1行強制（モバイルは通常折返し） */
 @media (min-width: 901px) {
   .merit-feature h5.h5-1line {
-    font-size: 18px;
-    letter-spacing: 0.02em;
-    line-height: 1.55;
     white-space: nowrap;
   }
 }
