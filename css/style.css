@@ -3333,22 +3333,22 @@ footer .footer-akatsuki-link a:hover {
 
 /* ===== CONTACT (Google Forms 埋め込み) ===== */
 .contact-form-embed {
-  max-width: 720px;
+  max-width: 960px;
   margin: 0 auto;
   background: var(--white);
   border: 1px solid var(--gray-border);
 }
 .contact-form-embed iframe {
   width: 100%;
-  height: 1200px;
+  height: 1700px;
   border: 0;
   display: block;
 }
 @media (max-width: 720px) {
-  .contact-form-embed iframe { height: 1500px; }
+  .contact-form-embed iframe { height: 1800px; }
 }
 .contact-privacy-note {
-  max-width: 720px;
+  max-width: 960px;
   margin: 18px auto 0;
   text-align: center;
   font-size: 12px;
@@ -3405,7 +3405,7 @@ footer .footer-akatsuki-link a:hover {
   justify-content: center;
 }
 .contact-page-inner {
-  max-width: 760px;
+  max-width: 1000px;
   width: 100%;
 }
 .contact-page .section-heading {
