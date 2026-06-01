@@ -1,0 +1,144 @@
+/* ==================================================
+   D-CROSS TAKASAKI 2026 — 印刷用チラシ 公開前版
+   print-flyer.css を継承し、QR を「COMING SOON カード」に
+   置き換えるための上書き・追加スタイルのみ定義
+   ================================================== */
+
+/* ===== HERO: COMING SOON バッジ ===== */
+.coming-soon-badge {
+  position: absolute;
+  top: 6mm;
+  right: 7mm;
+  z-index: 5;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5mm;
+  padding: 2mm 4mm;
+  background: var(--dc-magenta);
+  color: var(--white);
+  border-radius: 1.2mm;
+  box-shadow: 0 1mm 2mm rgba(198, 53, 122, 0.18);
+  letter-spacing: 0.12em;
+}
+.coming-soon-badge .csb-en {
+  font-family: var(--font-en);
+  font-size: 9pt;
+  font-weight: 900;
+  letter-spacing: 0.24em;
+  line-height: 1;
+}
+.coming-soon-badge .csb-ja {
+  font-family: var(--font-ja);
+  font-size: 6.5pt;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+}
+
+/* ===== 表面 ENTRY 横の QR ボックスを置き換え ===== */
+.entry-prelaunch-side {
+  position: absolute;
+  bottom: 5mm;
+  right: 5mm;
+  width: 50mm;
+  z-index: 2;
+}
+.prelaunch-card {
+  padding: 3mm 3mm;
+  background: linear-gradient(135deg, #ffffff 0%, #fef5fa 100%);
+  border: 1.2px solid var(--dc-magenta);
+  border-radius: 1.5mm;
+  text-align: center;
+}
+.prelaunch-badge {
+  display: inline-block;
+  margin-bottom: 1.2mm;
+  padding: 0.6mm 2mm;
+  background: var(--dc-magenta);
+  color: var(--white);
+  font-family: var(--font-en);
+  font-size: 7pt;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+.prelaunch-title {
+  margin: 0 0 0.8mm;
+  font-family: var(--font-ja);
+  font-size: 9.5pt;
+  font-weight: 800;
+  color: var(--dc-blue);
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+}
+.prelaunch-sub {
+  margin: 0 0 1.8mm;
+  font-family: var(--font-ja);
+  font-size: 7pt;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+.prelaunch-mail-label {
+  margin: 0 0 0.4mm;
+  font-family: var(--font-en);
+  font-size: 6pt;
+  font-weight: 700;
+  color: var(--text-light);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.prelaunch-mail {
+  margin: 0;
+  font-family: var(--font-en);
+  font-size: 7.5pt;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+  word-break: break-all;
+}
+
+/* 応募締切行のみ右側に余白（COMING SOON カードと被らないように） */
+.entry-block .entry-row--deadline { padding-right: 54mm; }
+
+/* ===== 裏面 BACK CTA: COMING SOON + Mail に置換 ===== */
+.back-cta--prelaunch {
+  border: 1.2px solid var(--dc-magenta) !important;
+  background: linear-gradient(135deg, #fef5fa 0%, #f5f9ff 100%) !important;
+}
+.back-cta--prelaunch .back-cta-lead {
+  color: var(--dc-magenta) !important;
+}
+.back-cta--prelaunch .back-cta-main strong {
+  color: var(--dc-magenta) !important;
+  border-bottom-color: var(--dc-magenta) !important;
+}
+.back-cta-mailblock {
+  flex-shrink: 0 !important;
+  min-width: 42mm !important;
+  padding: 1.8mm 3mm !important;
+  background: var(--white) !important;
+  border: 1px solid var(--dc-magenta) !important;
+  border-radius: 1mm !important;
+  text-align: center !important;
+}
+.back-cta-mail-label {
+  margin: 0 0 0.4mm !important;
+  font-family: var(--font-en) !important;
+  font-size: 6.5pt !important;
+  font-weight: 800 !important;
+  color: var(--dc-magenta) !important;
+  letter-spacing: 0.22em !important;
+}
+.back-cta-mail {
+  margin: 0 !important;
+  font-family: var(--font-en) !important;
+  font-size: 8.5pt !important;
+  font-weight: 700 !important;
+  color: var(--black) !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.3 !important;
+  word-break: break-all !important;
+}
