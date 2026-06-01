@@ -452,9 +452,14 @@ img { max-width: 100%; display: block; }
   color: var(--dc-blue);
   padding-top: 1pt;
 }
+.qualify-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6mm;
+  min-width: 0;
+}
 .qualify-sub-note {
   display: block;
-  margin-top: 0.5mm;
   font-size: 7.5pt;
   font-weight: 500;
   color: var(--text-light);
