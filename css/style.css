@@ -1737,16 +1737,15 @@ footer {
   margin-left: auto;
 }
 .footer-ntteast-logo {
-  max-width: 160px;
+  max-width: 320px;
   width: 100%;
   height: auto;
   display: block;
-  margin: 16px 0 12px auto;
+  margin: 18px 0 14px auto;
 }
 .footer-operator-note {
-  margin: 0;
-  max-width: 440px;
-  margin-left: auto;
+  margin: 0 0 0 auto;
+  max-width: 640px;
   font-size: 8pt;
   line-height: 1.7;
   color: var(--text-light);
@@ -1754,7 +1753,7 @@ footer {
   letter-spacing: 0.02em;
 }
 @media (max-width: 900px) {
-  .footer-ntteast-logo { margin: 12px auto 8px 0; max-width: 140px; }
+  .footer-ntteast-logo { margin: 14px auto 10px 0; max-width: 280px; }
   .footer-operator-note { text-align: left; margin-left: 0; max-width: 100%; }
 }
 .footer-bottom {
