@@ -452,6 +452,15 @@ img { max-width: 100%; display: block; }
   color: var(--dc-blue);
   padding-top: 1pt;
 }
+.qualify-sub-note {
+  display: block;
+  margin-top: 0.5mm;
+  font-size: 7.5pt;
+  font-weight: 500;
+  color: var(--text-light);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
 .qualify-note {
   font-size: 8pt;
   font-weight: 600;
