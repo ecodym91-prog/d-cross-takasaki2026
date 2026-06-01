@@ -1221,8 +1221,8 @@ img { max-width: 100%; display: block; }
 }
 .page-back .back-heading { margin-bottom: 2.5mm !important; }
 .page-back .back-heading-ja { font-size: 16pt !important; }
-.page-back .lead-box { margin-bottom: 2.5mm !important; }
-.page-back .lead-box-text { font-size: 10pt !important; line-height: 1.7 !important; }
+.page-back .lead-box { margin-bottom: 2mm !important; padding: 3mm 4mm !important; }
+.page-back .lead-box-text { font-size: 8.5pt !important; line-height: 1.6 !important; letter-spacing: 0.01em !important; font-weight: 600 !important; }
 .page-back .merits { margin-bottom: 2.5mm !important; }
 .page-back .merits-head { font-size: 10pt !important; margin-bottom: 2mm !important; }
 .page-back .merit-row { padding: 1.2mm 0 !important; }
