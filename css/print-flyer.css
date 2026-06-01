@@ -1256,9 +1256,9 @@ img { max-width: 100%; display: block; }
 .page-back .faq-flyer-note { margin-top: 1mm !important; font-size: 6.5pt !important; }
 .page-back .back-cta {
   margin: 1.5mm auto 1.5mm !important;
-  padding: 1.8mm 4mm !important;
-  max-width: 130mm !important;
-  gap: 4mm !important;
+  padding: 1.8mm 5mm !important;
+  max-width: 170mm !important;
+  gap: 5mm !important;
 }
 .page-back .back-cta-lead { font-size: 6.5pt !important; margin-bottom: 0.3mm !important; }
 .page-back .back-cta-main { font-size: 10pt !important; margin-bottom: 0.3mm !important; }
