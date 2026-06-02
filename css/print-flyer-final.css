@@ -70,9 +70,17 @@
 .page-back .back-cta-main { font-size: 9.5pt !important; margin-bottom: 0.3mm !important; }
 .page-back .back-cta-lead { margin-bottom: 0.3mm !important; line-height: 1.1 !important; }
 .page-back .back-cta-sub { line-height: 1.3 !important; }
-.page-back .back-cta-qr { width: 13mm !important; }
-.page-back .back-cta-qr .qr-box { width: 13mm !important; height: 13mm !important; }
-.page-back .back-cta-qr .qr-label { line-height: 1.2 !important; }
+.page-back .back-cta-qr { width: 30mm !important; text-align: center !important; }
+.page-back .back-cta-qr .qr-box {
+  width: 18mm !important;
+  height: 18mm !important;
+  margin: 0 auto !important;
+}
+.page-back .back-cta-qr .qr-label {
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  margin-top: 1mm !important;
+}
 
 /* ===== 右上 NTT EAST ロゴ（表面・裏面 共通オーバーレイ） ===== */
 .page-front,
