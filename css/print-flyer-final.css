@@ -81,11 +81,70 @@
 }
 .page-ntteast-logo {
   position: absolute;
-  top: 4mm;
-  right: 6mm;
-  width: 26mm;
+  top: 5mm;
+  right: 7mm;
+  width: 38mm;
   height: auto;
   z-index: 10;
+}
+
+/* ===== 表面 TOP BAND: 黒ラベル廃止・ブランドカラー強調 ===== */
+.page-front .top-band {
+  background: transparent !important;
+  color: var(--text) !important;
+  padding: 3.5mm 46mm 3mm 9mm !important;
+  border-bottom: 1.2px solid var(--gray-border) !important;
+  position: relative !important;
+}
+.page-front .top-band::before {
+  content: '';
+  position: absolute;
+  left: 9mm;
+  bottom: 0;
+  width: 60mm;
+  height: 1.5pt;
+  background: var(--gradient-multi, linear-gradient(90deg, var(--dc-blue) 0%, var(--dc-magenta) 50%, var(--dc-orange) 100%));
+}
+.page-front .top-band-text {
+  color: var(--text) !important;
+  font-family: var(--font-ja) !important;
+  font-size: 12pt !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  text-align: left !important;
+  display: inline-flex !important;
+  align-items: baseline !important;
+  gap: 2mm !important;
+  flex-wrap: wrap !important;
+}
+.top-band-label {
+  display: inline-block;
+  padding: 0.6mm 2.5mm;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-en);
+  font-size: 8.5pt;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  border-radius: 0.6mm;
+  line-height: 1.2;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+.top-band-area {
+  font-weight: 900;
+  background: linear-gradient(90deg, var(--dc-blue), var(--dc-magenta));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  letter-spacing: 0.04em;
+}
+.top-band-target {
+  font-weight: 900;
+  color: var(--dc-blue);
+  border-bottom: 1.5px solid var(--dc-blue);
+  padding-bottom: 0.3mm;
 }
 
 /* ===== 表面 キービジュアル最下部の運営者注記（8pt） ===== */
