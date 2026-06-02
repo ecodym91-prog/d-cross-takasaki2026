@@ -87,11 +87,15 @@
   height: auto;
   z-index: 10;
 }
+/* 裏面のみ少し下へ */
+.page-back .page-ntteast-logo {
+  top: 3.5mm;
+}
 
-/* ===== フッター AKATSUKI ロゴ位置調整: 中央 → やや下へ ===== */
+/* ===== フッター AKATSUKI ロゴ位置調整 ===== */
 .footer-meta .footer-akatsuki {
   top: auto !important;
-  bottom: 2mm !important;
+  bottom: 3.5mm !important;
   transform: none !important;
 }
 
