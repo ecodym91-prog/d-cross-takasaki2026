@@ -60,12 +60,12 @@
 /* phase-when を 8pt に統一（subdate も例外なく） */
 .page-back .phase-when { font-size: 8pt !important; }
 
-/* back-cta はそのまま広く（170mm）を継承、フォントだけ統一 */
+/* back-cta はもう少し横長で余裕を持たせる（185mm 幅・gap 拡大） */
 .page-back .back-cta {
   margin: 1.2mm auto 1.2mm !important;
-  padding: 1.5mm 4.5mm !important;
-  max-width: 170mm !important;
-  gap: 4mm !important;
+  padding: 2mm 7mm !important;
+  max-width: 185mm !important;
+  gap: 8mm !important;
 }
 .page-back .back-cta-main { font-size: 9.5pt !important; margin-bottom: 0.3mm !important; }
 .page-back .back-cta-lead { margin-bottom: 0.3mm !important; line-height: 1.1 !important; }
