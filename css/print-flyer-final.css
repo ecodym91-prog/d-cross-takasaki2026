@@ -1,0 +1,87 @@
+/* ============================================================
+   D-CROSS TAKASAKI 2026 — 印刷用チラシ 最終版（8pt下限版）
+   print-flyer.css を継承し、本文の最小サイズを 8pt に統一。
+   例外: フッター末尾の広告審査番号のみ 6pt 表示。
+   ============================================================ */
+
+/* ===== 表面 (PAGE FRONT): 8pt 未満を 8pt に引き上げ ===== */
+.page-front .entry-venue-tag { font-size: 8pt !important; }
+.page-front .entry-note { font-size: 8pt !important; }
+.page-front .entry-tag { font-size: 8pt !important; }
+.page-front .entry-tentative { font-size: 8pt !important; }
+.page-front .qr-label { font-size: 8pt !important; }
+
+/* ===== 表面・裏面 共通: フッター内テキストを 8pt に ===== */
+.hosts-band .footer-contact { font-size: 8pt !important; line-height: 1.5 !important; }
+.hosts-band .footer-note { font-size: 8pt !important; line-height: 1.45 !important; }
+
+/* ===== 裏面 (PAGE BACK) の 8pt 未満を 8pt に引き上げ ===== */
+.page-back .qualify-block--back .qualify-list li { font-size: 8pt !important; }
+.page-back .qualify-sub-note,
+.page-back .qualify-text-wrap .qualify-sub-note { font-size: 8pt !important; }
+.page-back .schedule-note { font-size: 8pt !important; }
+.page-back .faq-flyer-item dd { font-size: 8pt !important; }
+.page-back .faq-flyer-note { font-size: 8pt !important; }
+
+/* 裏面 back-cta（ENTRY OPEN ブロック）8pt 下限化 */
+.page-back .back-cta-lead { font-size: 8pt !important; }
+.page-back .back-cta-sub { font-size: 8pt !important; }
+.page-back .back-cta-qr .qr-box { font-size: 8pt !important; }
+.page-back .back-cta-qr .qr-label { font-size: 8pt !important; }
+
+/* ===== フォント拡大に伴う圧縮（フッター見切れ防止）===== */
+.page-back .lead-box { margin-bottom: 1.8mm !important; padding: 2.5mm 4mm !important; }
+.page-back .lead-box-text { font-size: 8.2pt !important; line-height: 1.55 !important; font-weight: 600 !important; }
+.page-back .merits { margin-bottom: 2mm !important; }
+.page-back .merits-head { font-size: 9.5pt !important; margin-bottom: 1.5mm !important; }
+.page-back .merit-row { padding: 0.8mm 0 !important; }
+.page-back .merit-text { font-size: 8pt !important; line-height: 1.45 !important; }
+.page-back .schedule-head { font-size: 9.5pt !important; margin-bottom: 1.5mm !important; padding-bottom: 1mm !important; }
+.page-back .schedule-phases { margin-bottom: 1.5mm !important; gap: 2mm !important; }
+.page-back .phase-card { padding: 2.5mm 2.5mm 2.2mm !important; }
+.page-back .phase-num { font-size: 12pt !important; }
+.page-back .phase-when { font-size: 7.5pt !important; }  /* 注: 副情報のため例外 → 後述ルールで 8pt に */
+.page-back .phase-title { font-size: 9pt !important; }
+.page-back .phase-desc { font-size: 8pt !important; line-height: 1.4 !important; }
+.page-back .schedule-note { margin-top: 0.5mm !important; line-height: 1.4 !important; }
+.page-back .qualify-block { margin-bottom: 1.8mm !important; }
+.page-back .qualify-block--back .qualify-text { padding: 2.2mm 3.5mm !important; }
+.page-back .qualify-block--back .qualify-list li { padding: 0.7mm 0 !important; line-height: 1.5 !important; }
+.page-back .qualify-block--back .qualify-text-wrap { gap: 0.4mm !important; }
+.page-back .qualify-block--back .qualify-sub-note { line-height: 1.4 !important; }
+.page-back .qualify-note { font-size: 8pt !important; margin-top: 1mm !important; line-height: 1.4 !important; }
+.page-back .faq-flyer { margin-bottom: 1.5mm !important; }
+.page-back .faq-flyer-head { font-size: 9.5pt !important; margin-bottom: 1.2mm !important; padding-bottom: 0.8mm !important; }
+.page-back .faq-flyer-item { padding: 0.8mm 0 !important; }
+.page-back .faq-flyer-item dt { font-size: 8pt !important; line-height: 1.4 !important; }
+.page-back .faq-flyer-item dd { line-height: 1.4 !important; margin-top: 0.5mm !important; }
+.page-back .faq-flyer-note { margin-top: 0.8mm !important; line-height: 1.4 !important; }
+
+/* phase-when を 8pt に統一（subdate も例外なく） */
+.page-back .phase-when { font-size: 8pt !important; }
+
+/* back-cta はそのまま広く（170mm）を継承、フォントだけ統一 */
+.page-back .back-cta {
+  margin: 1.2mm auto 1.2mm !important;
+  padding: 1.5mm 4.5mm !important;
+  max-width: 170mm !important;
+  gap: 4mm !important;
+}
+.page-back .back-cta-main { font-size: 9.5pt !important; margin-bottom: 0.3mm !important; }
+.page-back .back-cta-lead { margin-bottom: 0.3mm !important; line-height: 1.1 !important; }
+.page-back .back-cta-sub { line-height: 1.3 !important; }
+.page-back .back-cta-qr { width: 13mm !important; }
+.page-back .back-cta-qr .qr-box { width: 13mm !important; height: 13mm !important; }
+.page-back .back-cta-qr .qr-label { line-height: 1.2 !important; }
+
+/* ===== 広告審査番号（フッター最下部・6pt 例外） ===== */
+.footer-meta .footer-ad-review {
+  margin: 1.5mm 0 0 !important;
+  font-family: var(--font-ja) !important;
+  font-size: 6pt !important;
+  font-weight: 500 !important;
+  color: var(--text-light) !important;
+  letter-spacing: 0.04em !important;
+  text-align: right !important;
+  line-height: 1.3 !important;
+}
