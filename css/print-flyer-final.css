@@ -74,6 +74,34 @@
 .page-back .back-cta-qr .qr-box { width: 13mm !important; height: 13mm !important; }
 .page-back .back-cta-qr .qr-label { line-height: 1.2 !important; }
 
+/* ===== 右上 NTT EAST ロゴ（表面・裏面 共通オーバーレイ） ===== */
+.page-front,
+.page-back {
+  position: relative;
+}
+.page-ntteast-logo {
+  position: absolute;
+  top: 4mm;
+  right: 6mm;
+  width: 26mm;
+  height: auto;
+  z-index: 10;
+}
+
+/* ===== 表面 キービジュアル最下部の運営者注記（8pt） ===== */
+.page-front .hero .hero-operator-note {
+  position: relative;
+  z-index: 2;
+  margin: 4mm 6mm 0;
+  font-family: var(--font-ja);
+  font-size: 8pt;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
 /* ===== 広告審査番号（フッター最下部・6pt 例外） ===== */
 .footer-meta .footer-ad-review {
   margin: 1.5mm 0 0 !important;
