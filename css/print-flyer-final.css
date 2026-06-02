@@ -81,11 +81,18 @@
 }
 .page-ntteast-logo {
   position: absolute;
-  top: 5mm;
+  top: 1.5mm;
   right: 7mm;
   width: 38mm;
   height: auto;
   z-index: 10;
+}
+
+/* ===== フッター AKATSUKI ロゴ位置調整: 中央 → やや下へ ===== */
+.footer-meta .footer-akatsuki {
+  top: auto !important;
+  bottom: 2mm !important;
+  transform: none !important;
 }
 
 /* ===== 表面 TOP BAND: 黒ラベル廃止・ブランドカラー強調 ===== */
