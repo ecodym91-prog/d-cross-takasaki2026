@@ -204,24 +204,32 @@ img { max-width: 100%; display: block; }
   color: var(--black);
   margin-bottom: 6mm;
 }
-.q { color: var(--dc-blue); }
+.q { color: var(--black); }
 .hero-catch-sub {
-  display: block;
-  font-size: 22pt;
-  font-weight: 700;
-  color: var(--text);
-  letter-spacing: 0.08em;
-  margin-bottom: 16mm;
+  display: inline-block;
+  font-size: 28pt;
+  font-weight: 900;
+  color: var(--white);
+  background: var(--gradient);
+  padding: 4mm 14mm;
+  border-radius: 2mm;
+  letter-spacing: 0.1em;
+  margin-bottom: 18mm;
+  box-shadow: 0 2mm 6mm rgba(31, 111, 212, 0.22);
 }
 .hero-logo-wrap {
-  margin: 12mm 0 14mm;
+  margin: 14mm auto 16mm;
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .hero-logo-img {
-  width: 280mm;
-  max-width: 86%;
+  width: 320mm;
+  max-width: 92%;
   height: auto;
+  margin: 0 auto;
+  display: block;
 }
 .hero-tagline {
   font-family: var(--font-ja);
