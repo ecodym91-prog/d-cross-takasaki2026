@@ -1,0 +1,544 @@
+/* ============================================================
+   D-CROSS TAKASAKI 2026 — A2 POSTER（チラシ表面ベース）
+   サイズ: A2 タテ 420mm × 594mm
+   下限フォントサイズ: 14pt（広告審査番号のみ 8pt 例外）
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --dc-blue: #1f6fd4;
+  --dc-blue-dark: #1757a5;
+  --dc-magenta: #c6357a;
+  --dc-magenta-dark: #962a5e;
+  --dc-yellow: #f5b924;
+  --dc-orange: #e87722;
+  --dc-green: #2d8659;
+  --gradient: linear-gradient(135deg, #1f6fd4 0%, #c6357a 100%);
+  --gradient-multi: linear-gradient(90deg, #1f6fd4 0%, #2d8659 30%, #f5b924 55%, #e87722 80%, #c6357a 100%);
+  --black: #111827;
+  --text: #1f2937;
+  --text-light: #555d6b;
+  --gray-border: #e3ddd2;
+  --bg-base: #faf8f3;
+  --white: #FFFFFF;
+  --font-ja: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'メイリオ', sans-serif;
+  --font-en: 'Outfit', 'Manrope', 'Helvetica Neue', Arial, sans-serif;
+}
+
+@page { size: A2 portrait; margin: 0; }
+
+html { font-size: 12pt; }
+
+body {
+  font-family: var(--font-ja);
+  color: var(--text);
+  background: #cccccc;
+  font-feature-settings: "palt";
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
+  padding: 20px 0;
+}
+
+img { max-width: 100%; display: block; }
+
+.page.page-poster {
+  width: 420mm;
+  height: 594mm;
+  margin: 0 auto 20px;
+  background: var(--bg-base);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.22);
+  color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ====================================================
+   右上 NTT EAST ロゴ
+   ==================================================== */
+.poster-ntteast-logo {
+  position: absolute;
+  top: 4mm;
+  right: 14mm;
+  width: 76mm;
+  height: auto;
+  z-index: 10;
+}
+
+/* ====================================================
+   TOP BAND（ブランドカラー強調・透明背景）
+   ==================================================== */
+.top-band {
+  background: transparent;
+  color: var(--text);
+  padding: 8mm 92mm 7mm 32mm;
+  border-bottom: 2.4px solid var(--gray-border);
+  position: relative;
+  flex-shrink: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+}
+.top-band::before {
+  content: '';
+  position: absolute;
+  left: 32mm;
+  bottom: 0;
+  width: 120mm;
+  height: 3pt;
+  background: var(--gradient-multi);
+}
+.top-band-text {
+  font-family: var(--font-ja);
+  font-size: 24pt;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-align: left;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4mm;
+  flex-wrap: wrap;
+  color: var(--text);
+}
+.top-band-label {
+  display: inline-block;
+  padding: 1.2mm 5mm;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-en);
+  font-size: 16pt;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  border-radius: 1.2mm;
+  line-height: 1.2;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+.top-band-area {
+  font-weight: 900;
+  background: linear-gradient(90deg, var(--dc-blue), var(--dc-magenta));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  letter-spacing: 0.04em;
+}
+.top-band-target {
+  font-weight: 900;
+  color: var(--dc-blue);
+  border-bottom: 3px solid var(--dc-blue);
+  padding-bottom: 0.6mm;
+}
+
+/* ====================================================
+   HERO（D-CROSS キービジュアル：×クロス＋粒子）
+   ==================================================== */
+.hero {
+  position: relative;
+  flex-shrink: 0;
+  padding: 28mm 24mm 18mm;
+  background: linear-gradient(135deg, #faf8f3 0%, #f7f1e7 100%);
+  overflow: hidden;
+  min-height: 260mm;
+}
+.hero-cross-bar {
+  position: absolute;
+  background: var(--gradient-multi);
+  opacity: 0.16;
+  pointer-events: none;
+}
+.hero-cross-bar--1 {
+  top: -10mm;
+  left: -30mm;
+  width: 600mm;
+  height: 14mm;
+  transform: rotate(28deg);
+  transform-origin: center center;
+}
+.hero-cross-bar--2 {
+  top: -10mm;
+  left: -30mm;
+  width: 600mm;
+  height: 14mm;
+  transform: rotate(-28deg);
+  transform-origin: center center;
+}
+.hero-particles { position: absolute; inset: 0; pointer-events: none; }
+.hero-particles span {
+  position: absolute;
+  width: 6mm;
+  height: 6mm;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+.hero-particles .p-1  { top: 16mm;  left: 32mm;  background: var(--dc-blue); }
+.hero-particles .p-2  { top: 42mm;  left: 80mm;  background: var(--dc-magenta); width: 4mm; height: 4mm; }
+.hero-particles .p-3  { top: 22mm;  right: 60mm; background: var(--dc-yellow); width: 5mm; height: 5mm; }
+.hero-particles .p-4  { top: 88mm;  left: 20mm;  background: var(--dc-orange); width: 4mm; height: 4mm; }
+.hero-particles .p-5  { top: 110mm; right: 36mm; background: var(--dc-green); width: 5mm; height: 5mm; }
+.hero-particles .p-6  { top: 150mm; left: 70mm;  background: var(--dc-blue); width: 4mm; height: 4mm; }
+.hero-particles .p-7  { top: 180mm; right: 80mm; background: var(--dc-magenta); width: 6mm; height: 6mm; }
+.hero-particles .p-8  { bottom: 60mm; left: 32mm; background: var(--dc-yellow); width: 4mm; height: 4mm; }
+.hero-particles .p-9  { bottom: 90mm; right: 28mm; background: var(--dc-blue); width: 5mm; height: 5mm; }
+.hero-particles .p-10 { bottom: 30mm; left: 100mm; background: var(--dc-orange); width: 4mm; height: 4mm; }
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.hero-catch {
+  font-family: var(--font-ja);
+  font-weight: 900;
+  color: var(--black);
+  letter-spacing: 0.04em;
+}
+.hero-catch-main {
+  display: block;
+  font-size: 64pt;
+  line-height: 1.25;
+  color: var(--black);
+  margin-bottom: 6mm;
+}
+.q { color: var(--dc-blue); }
+.hero-catch-sub {
+  display: block;
+  font-size: 22pt;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.08em;
+  margin-bottom: 16mm;
+}
+.hero-logo-wrap {
+  margin: 12mm 0 14mm;
+  display: flex;
+  justify-content: center;
+}
+.hero-logo-img {
+  width: 280mm;
+  max-width: 86%;
+  height: auto;
+}
+.hero-tagline {
+  font-family: var(--font-ja);
+  font-size: 22pt;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.08em;
+  line-height: 1.55;
+  margin-top: 4mm;
+}
+.hero-tagline-accent {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+/* HERO 最下部の運営者注記（オーバーレイ・14pt 左詰め） */
+.hero .hero-operator-note {
+  position: absolute;
+  left: 24mm;
+  right: 24mm;
+  bottom: 5mm;
+  margin: 0;
+  z-index: 3;
+  font-family: var(--font-ja);
+  font-size: 14pt;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+/* ====================================================
+   KEY MESSAGE BOX
+   ==================================================== */
+.keymsg {
+  background: linear-gradient(135deg, #1757a5 0%, #962a5e 100%);
+  color: var(--white);
+  padding: 14mm 30mm;
+  flex-shrink: 0;
+}
+.keymsg-inner { max-width: 380mm; margin: 0 auto; }
+.keymsg-line {
+  font-family: var(--font-ja);
+  font-size: 22pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  margin-bottom: 5mm;
+}
+.keymsg-line:last-child { margin-bottom: 0; }
+.keymsg-line strong { font-weight: 900; color: #ffe7b0; }
+.keymsg-highlight {
+  padding-top: 6mm;
+  margin-top: 4mm;
+  border-top: 1.5px solid rgba(255,255,255,0.32);
+  font-size: 24pt;
+}
+.keymsg-amount {
+  display: inline-block;
+  background: var(--dc-yellow);
+  color: var(--black);
+  padding: 0.6mm 5mm;
+  border-radius: 1.4mm;
+  font-weight: 900;
+  font-size: 28pt;
+  margin: 0 2mm;
+  vertical-align: -1mm;
+}
+.keymsg-amount-num {
+  font-family: var(--font-en);
+  font-size: 36pt;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-right: 1mm;
+}
+.keymsg-amount-note {
+  font-size: 14pt;
+  font-weight: 600;
+  margin-left: 2mm;
+  vertical-align: middle;
+}
+
+/* ====================================================
+   ENTRY BLOCK（募集要項）
+   ==================================================== */
+.entry-block {
+  position: relative;
+  padding: 18mm 30mm 18mm;
+  flex: 1 1 auto;
+  background: var(--bg-base);
+}
+.entry-head {
+  display: flex;
+  align-items: baseline;
+  gap: 6mm;
+  margin-bottom: 12mm;
+  padding-bottom: 5mm;
+  border-bottom: 3px solid var(--black);
+}
+.entry-head-mark {
+  font-family: var(--font-en);
+  font-size: 36pt;
+  font-weight: 300;
+  color: var(--dc-magenta);
+  line-height: 1;
+}
+.entry-head-en {
+  font-family: var(--font-en);
+  font-size: 16pt;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  color: var(--text-light);
+  text-transform: uppercase;
+}
+.entry-head-ja {
+  font-family: var(--font-ja);
+  font-size: 28pt;
+  font-weight: 900;
+  color: var(--black);
+  letter-spacing: 0.06em;
+}
+
+.entry-list { display: flex; flex-direction: column; gap: 4.5mm; }
+.entry-row {
+  display: grid;
+  grid-template-columns: 70mm 1fr;
+  gap: 8mm;
+  align-items: baseline;
+  padding: 3mm 0;
+  border-bottom: 1px dashed var(--gray-border);
+}
+.entry-row:last-child { border-bottom: none; }
+.entry-label {
+  font-family: var(--font-ja);
+  font-size: 18pt;
+  font-weight: 800;
+  color: var(--black);
+  letter-spacing: 0.1em;
+}
+.entry-label--accent {
+  color: var(--dc-magenta);
+}
+.entry-value {
+  font-family: var(--font-ja);
+  font-size: 18pt;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.55;
+  letter-spacing: 0.04em;
+}
+.entry-date {
+  font-family: var(--font-en);
+  font-size: 22pt;
+  font-weight: 900;
+  color: var(--black);
+  letter-spacing: 0.02em;
+}
+.entry-date small { font-size: 14pt; font-weight: 700; margin-left: 1mm; }
+.entry-arrow {
+  font-family: var(--font-en);
+  font-size: 22pt;
+  font-weight: 700;
+  color: var(--dc-magenta);
+  margin: 0 3mm;
+}
+.entry-date--accent { color: var(--dc-magenta); }
+.entry-tag {
+  display: inline-block;
+  margin-left: 4mm;
+  padding: 1mm 4mm;
+  background: var(--dc-magenta);
+  color: var(--white);
+  font-family: var(--font-en);
+  font-size: 14pt;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  border-radius: 0.8mm;
+  vertical-align: 1mm;
+}
+.entry-tentative {
+  display: inline-block;
+  margin-left: 4mm;
+  padding: 0.6mm 3mm;
+  background: var(--dc-yellow);
+  color: var(--black);
+  font-family: var(--font-ja);
+  font-size: 14pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 0.8mm;
+}
+.entry-note {
+  display: block;
+  margin-top: 2mm;
+  font-family: var(--font-ja);
+  font-size: 14pt;
+  font-weight: 500;
+  color: var(--text-light);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+.entry-venue-item {
+  display: flex;
+  align-items: baseline;
+  gap: 4mm;
+  margin: 0 0 3mm;
+  font-size: 17pt;
+  line-height: 1.5;
+}
+.entry-venue-item:last-child { margin-bottom: 0; }
+.entry-venue-tag {
+  flex-shrink: 0;
+  display: inline-block;
+  padding: 1.2mm 4mm;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-en);
+  font-size: 14pt;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  min-width: 32mm;
+  text-align: center;
+  border-radius: 0.8mm;
+}
+.entry-venue {
+  font-family: var(--font-ja);
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* QR — entry-block 右下 */
+.entry-qr-side {
+  position: absolute;
+  bottom: 16mm;
+  right: 28mm;
+  width: 60mm;
+  text-align: center;
+  z-index: 2;
+}
+.qr-box {
+  width: 60mm;
+  height: 60mm;
+  background: var(--white);
+  border: 1.5px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-en);
+  font-size: 18pt;
+  font-weight: 700;
+  color: var(--text-light);
+  letter-spacing: 0.1em;
+  border-radius: 1mm;
+}
+.qr-label {
+  margin: 3mm 0 0;
+  font-family: var(--font-ja);
+  font-size: 14pt;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* 応募締切行のみ右側に余白（QR と被らない） */
+.entry-block .entry-row--deadline { padding-right: 78mm; }
+
+/* ====================================================
+   FOOTER（hosts-band + footer-meta）
+   ==================================================== */
+.hosts-band {
+  flex-shrink: 0;
+  background: #f2efe9;
+  border-top: 2px solid var(--gray-border);
+}
+.footer-meta {
+  padding: 9mm 30mm 11mm;
+  position: relative;
+}
+.footer-contact {
+  font-family: var(--font-ja);
+  font-size: 15pt;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  margin-bottom: 2mm;
+}
+.footer-note {
+  font-family: var(--font-ja);
+  font-size: 14pt;
+  font-weight: 500;
+  color: var(--text-light);
+  letter-spacing: 0.02em;
+  line-height: 1.55;
+}
+.footer-akatsuki {
+  position: absolute;
+  right: 22mm;
+  bottom: 9mm;
+  width: 56mm;
+}
+.footer-akatsuki img { width: 100%; }
+
+/* 広告審査番号（8pt 例外・左詰め） */
+.footer-ad-review {
+  margin-top: 4mm;
+  font-family: var(--font-en);
+  font-size: 8pt;
+  font-weight: 500;
+  color: var(--text-light);
+  letter-spacing: 0.06em;
+  text-align: left;
+  line-height: 1.3;
+}
