@@ -75,7 +75,7 @@ img { max-width: 100%; display: block; }
 .top-band {
   background: transparent;
   color: var(--text);
-  padding: 8mm 92mm 7mm 32mm;
+  padding: 8mm 92mm 7mm 56mm;
   border-bottom: 2.4px solid var(--gray-border);
   position: relative;
   flex-shrink: 0;
@@ -86,7 +86,7 @@ img { max-width: 100%; display: block; }
 .top-band::before {
   content: '';
   position: absolute;
-  left: 32mm;
+  left: 56mm;
   bottom: 0;
   width: 120mm;
   height: 3pt;
@@ -209,7 +209,7 @@ img { max-width: 100%; display: block; }
 }
 .q { color: inherit; }
 .hero-logo-wrap {
-  margin: 16mm 0 18mm;
+  margin: 38mm 0 18mm;
   width: 100%;
   display: block;
   overflow: visible;
@@ -508,7 +508,7 @@ img { max-width: 100%; display: block; }
 .footer-akatsuki {
   position: absolute;
   right: 8mm;
-  bottom: 9mm;
+  bottom: 18mm;
   width: 56mm;
 }
 .footer-akatsuki img { width: 100%; }
