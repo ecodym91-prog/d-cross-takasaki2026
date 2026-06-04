@@ -188,6 +188,12 @@
   transform: translateY(3mm);
 }
 
+/* ===== 裏面 BACK CTA: 1つ目の <strong>（選考要件・最新情報）は黒・下線なしに戻す ===== */
+.page-back .back-cta-main strong:first-of-type {
+  color: var(--black) !important;
+  border-bottom: none !important;
+}
+
 /* ===== 裏面 スケジュール見出し: 直下の青線（border-bottom）を削除 ===== */
 .page-back .schedule-head {
   border-bottom: none !important;
