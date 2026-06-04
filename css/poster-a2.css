@@ -295,7 +295,7 @@ img { max-width: 100%; display: block; }
    ==================================================== */
 .entry-block {
   position: relative;
-  padding: 18mm 30mm 18mm;
+  padding: 14mm 30mm 4mm;
   flex: 1 1 auto;
   background: var(--bg-base);
 }
@@ -352,23 +352,23 @@ img { max-width: 100%; display: block; }
 }
 .entry-value {
   font-family: var(--font-ja);
-  font-size: 18pt;
-  font-weight: 700;
+  font-size: 24pt;
+  font-weight: 800;
   color: var(--text);
-  line-height: 1.55;
+  line-height: 1.5;
   letter-spacing: 0.04em;
 }
 .entry-date {
   font-family: var(--font-en);
-  font-size: 22pt;
+  font-size: 30pt;
   font-weight: 900;
   color: var(--black);
   letter-spacing: 0.02em;
 }
-.entry-date small { font-size: 14pt; font-weight: 700; margin-left: 1mm; }
+.entry-date small { font-size: 18pt; font-weight: 700; margin-left: 1mm; }
 .entry-arrow {
   font-family: var(--font-en);
-  font-size: 22pt;
+  font-size: 28pt;
   font-weight: 700;
   color: var(--dc-magenta);
   margin: 0 3mm;
@@ -377,24 +377,24 @@ img { max-width: 100%; display: block; }
 .entry-tag {
   display: inline-block;
   margin-left: 4mm;
-  padding: 1mm 4mm;
+  padding: 1.2mm 4.5mm;
   background: var(--dc-magenta);
   color: var(--white);
   font-family: var(--font-en);
-  font-size: 14pt;
+  font-size: 16pt;
   font-weight: 800;
   letter-spacing: 0.16em;
   border-radius: 0.8mm;
-  vertical-align: 1mm;
+  vertical-align: 2mm;
 }
 .entry-tentative {
   display: inline-block;
   margin-left: 4mm;
-  padding: 0.6mm 3mm;
+  padding: 0.8mm 3.5mm;
   background: var(--dc-yellow);
   color: var(--black);
   font-family: var(--font-ja);
-  font-size: 14pt;
+  font-size: 16pt;
   font-weight: 700;
   letter-spacing: 0.04em;
   border-radius: 0.8mm;
