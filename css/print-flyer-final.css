@@ -183,6 +183,17 @@
   text-align: left;
 }
 
+/* ===== 表面 HERO タグライン: 視覚的に少し下へ（他配置は不変） ===== */
+.page-front .hero-tagline {
+  transform: translateY(3mm);
+}
+
+/* ===== 裏面 スケジュール見出し: 直下の青線（border-bottom）を削除 ===== */
+.page-back .schedule-head {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+
 /* ===== 広告審査番号（フッター最下部・6pt 例外・左詰め） ===== */
 .footer-meta .footer-ad-review {
   margin: 1.5mm 0 0 !important;
