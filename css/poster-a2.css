@@ -198,25 +198,19 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.04em;
 }
 .hero-catch-main {
-  display: block;
-  font-size: 64pt;
-  line-height: 1.25;
-  color: var(--black);
-  margin-bottom: 6mm;
-}
-.q { color: var(--black); }
-.hero-catch-sub {
   display: inline-block;
-  font-size: 28pt;
+  font-size: 54pt;
   font-weight: 900;
+  line-height: 1.2;
   color: var(--white);
   background: var(--gradient);
-  padding: 4mm 14mm;
-  border-radius: 2mm;
-  letter-spacing: 0.1em;
-  margin-bottom: 18mm;
-  box-shadow: 0 2mm 6mm rgba(31, 111, 212, 0.22);
+  padding: 6mm 18mm;
+  border-radius: 2.5mm;
+  letter-spacing: 0.08em;
+  margin-bottom: 0;
+  box-shadow: 0 3mm 8mm rgba(31, 111, 212, 0.22);
 }
+.q { color: inherit; }
 .hero-logo-wrap {
   margin: 14mm auto 16mm;
   width: 100%;
@@ -239,6 +233,20 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.08em;
   line-height: 1.55;
   margin-top: 4mm;
+}
+.hero-tagline-quote {
+  display: block;
+  font-family: var(--font-ja);
+  font-size: 38pt;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.25;
+  margin-bottom: 6mm;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 .hero-tagline-accent {
   background: var(--gradient);
