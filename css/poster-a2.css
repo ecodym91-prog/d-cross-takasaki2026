@@ -220,7 +220,7 @@ img { max-width: 100%; display: block; }
   height: auto;
   display: block;
   margin-left: auto;
-  margin-right: -20mm;
+  margin-right: -40mm;
 }
 .hero-tagline {
   font-family: var(--font-ja);
