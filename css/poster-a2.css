@@ -491,6 +491,13 @@ img { max-width: 100%; display: block; }
   color: var(--text-light);
   letter-spacing: 0.1em;
   border-radius: 1mm;
+  overflow: hidden;
+}
+.qr-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 .qr-label {
   margin: 3mm 0 0;

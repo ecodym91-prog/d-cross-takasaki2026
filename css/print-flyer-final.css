@@ -200,6 +200,14 @@
   padding-bottom: 0 !important;
 }
 
+/* ===== QR 画像差し替え対応：qr-box 内の img をフィット ===== */
+.qr-box img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  display: block;
+}
+
 /* ===== 広告審査番号（フッター最下部・6pt 例外・左詰め） ===== */
 .footer-meta .footer-ad-review {
   margin: 1.5mm 0 0 !important;
