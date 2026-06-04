@@ -32,20 +32,33 @@ html { font-size: 12pt; }
 
 /* ================================================
    印刷／PDF 出力時：1枚物 A2 でぴったり収める
+   サブピクセル丸めで2ページ目が出ないよう、印刷時のみ
+   ページ高さを 1mm 減らし、overflow:hidden を明示する
    ================================================ */
 @media print {
   html, body {
     margin: 0 !important;
     padding: 0 !important;
     background: var(--white) !important;
+    width: 420mm !important;
+    height: 593mm !important;
+    overflow: hidden !important;
   }
   .page.page-poster {
+    width: 420mm !important;
+    height: 593mm !important;
+    max-height: 593mm !important;
     margin: 0 !important;
     box-shadow: none !important;
+    overflow: hidden !important;
     page-break-after: avoid;
     page-break-inside: avoid;
     break-after: avoid;
     break-inside: avoid;
+  }
+  /* 印刷時：フッターパディング下部を少し詰めて余裕を作る */
+  .footer-meta {
+    padding-bottom: 58mm !important;
   }
 }
 
