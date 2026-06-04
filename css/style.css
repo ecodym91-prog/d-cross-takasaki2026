@@ -3231,6 +3231,7 @@ footer .footer-akatsuki-link a:hover {
   padding: 0;
   border-bottom: 2px solid var(--dc-blue);
   padding-bottom: 12px;
+  min-height: 72px;
 }
 .schedule-horizontal .schedule-phase-num {
   position: relative;
@@ -3833,6 +3834,14 @@ footer .footer-akatsuki-link a:hover {
 }
 .schedule-day-label:not(.gray):not([class*="long"]) {
   /* default colors keep */
+}
+
+/* DAY 5 会場名を一行で表示（デスクトップのみ）。スマホは折返し可 */
+@media (min-width: 721px) {
+  .schedule-horizontal .schedule-venue.schedule-venue--nowrap {
+    white-space: nowrap;
+    overflow: visible;
+  }
 }
 
 /* ===== PM 写真: object-position center top（顔上部維持） ===== */
