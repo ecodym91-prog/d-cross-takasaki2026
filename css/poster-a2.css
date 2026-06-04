@@ -212,6 +212,7 @@ img { max-width: 100%; display: block; }
   margin: 16mm 0 18mm;
   width: 100%;
   display: block;
+  overflow: visible;
 }
 .hero-logo-img {
   width: 340mm;
@@ -219,15 +220,15 @@ img { max-width: 100%; display: block; }
   height: auto;
   display: block;
   margin-left: auto;
-  margin-right: 0;
+  margin-right: -20mm;
 }
 .hero-tagline {
   font-family: var(--font-ja);
-  font-size: 22pt;
+  font-size: 30pt;
   font-weight: 700;
   color: var(--text);
   letter-spacing: 0.08em;
-  line-height: 1.55;
+  line-height: 1.5;
   margin-top: 4mm;
 }
 .hero-tagline-accent {
