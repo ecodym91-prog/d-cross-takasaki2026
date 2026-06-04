@@ -330,6 +330,37 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.06em;
 }
 
+/* 公式サイト誘導 CTA（entry-list の直上） */
+.latest-info-cta {
+  display: flex;
+  align-items: center;
+  gap: 5mm;
+  margin: 0 0 8mm;
+  padding: 4mm 8mm;
+  background: linear-gradient(135deg, rgba(31,111,212,0.10) 0%, rgba(198,53,122,0.10) 100%);
+  border-left: 5px solid var(--dc-magenta);
+  border-radius: 0 1.5mm 1.5mm 0;
+  font-family: var(--font-ja);
+  font-size: 19pt;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+.lic-mark {
+  flex-shrink: 0;
+  font-family: var(--font-en);
+  font-size: 26pt;
+  font-weight: 900;
+  color: var(--dc-magenta);
+  line-height: 1;
+}
+.lic-text strong {
+  color: var(--dc-blue);
+  font-weight: 900;
+}
+.lic-text strong + strong { color: var(--dc-magenta); }
+
 .entry-list { display: flex; flex-direction: column; gap: 4.5mm; }
 .entry-row {
   display: grid;
@@ -485,7 +516,7 @@ img { max-width: 100%; display: block; }
   border-top: 2px solid var(--gray-border);
 }
 .footer-meta {
-  padding: 8mm 22mm 24mm;
+  padding: 8mm 22mm 40mm;
   position: relative;
 }
 .footer-contact {
@@ -508,7 +539,7 @@ img { max-width: 100%; display: block; }
 .footer-akatsuki {
   position: absolute;
   right: 8mm;
-  bottom: 32mm;
+  bottom: 46mm;
   width: 56mm;
 }
 .footer-akatsuki img { width: 100%; }
