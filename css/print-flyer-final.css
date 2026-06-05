@@ -111,7 +111,7 @@
   bottom: auto !important;
   right: 8mm !important;
   transform: none !important;
-  width: 16mm !important;
+  width: 24mm !important;
 }
 /* 問い合わせ先は一行表示（途中で折り返さない） */
 .footer-meta .footer-contact {
