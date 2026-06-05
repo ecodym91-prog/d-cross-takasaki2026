@@ -255,9 +255,9 @@
   display: block;
 }
 
-/* ===== 広告審査番号（フッター最下部・6pt 例外・右詰め） ===== */
+/* ===== 広告審査番号（フッター最下部・6pt 例外・右詰め＋3字分右へ） ===== */
 .footer-meta .footer-ad-review {
-  margin: 1.5mm 0 0 !important;
+  margin: 1.5mm -4mm 0 0 !important;
   font-family: var(--font-en) !important;
   font-size: 6pt !important;
   font-weight: 500 !important;
