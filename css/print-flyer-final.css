@@ -104,15 +104,16 @@
 .footer-meta .footer-akatsuki {
   top: 2mm !important;
   bottom: auto !important;
-  right: 6mm !important;
+  right: 3mm !important;
   transform: none !important;
-  width: 18mm !important;
+  width: 16mm !important;
 }
-/* AKATSUKI ロゴと被らないよう、問い合わせ先行に右側余白を確保 */
+/* 問い合わせ先は一行表示（途中で折り返さない）。AKATSUKI ロゴは右端で待機 */
 .footer-meta .footer-contact {
-  padding-right: 22mm;
+  white-space: nowrap !important;
+  padding-right: 18mm;
 }
-/* Mail：xxxx@xxx 部分は途中改行禁止 */
+/* Mail：xxxx@xxx 部分も途中改行禁止 */
 .footer-meta .footer-contact .footer-mail {
   white-space: nowrap;
 }
