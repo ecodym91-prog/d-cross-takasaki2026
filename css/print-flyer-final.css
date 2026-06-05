@@ -112,6 +112,10 @@
 .footer-meta .footer-contact {
   padding-right: 22mm;
 }
+/* Mail：xxxx@xxx 部分は途中改行禁止 */
+.footer-meta .footer-contact .footer-mail {
+  white-space: nowrap;
+}
 
 /* ===== 表面 TOP BAND: 黒ラベル廃止・ブランドカラー強調 ===== */
 .page-front .top-band {
