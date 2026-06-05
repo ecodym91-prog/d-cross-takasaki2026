@@ -320,6 +320,17 @@ img { max-width: 100%; display: block; }
   margin-left: 3mm;
   vertical-align: middle;
 }
+/* KEY MESSAGE 直下の支援金注釈（14pt 下限） */
+.keymsg-note {
+  margin: 5mm 0 0;
+  font-family: var(--font-ja);
+  font-size: 14pt;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
 
 /* ====================================================
    ENTRY BLOCK（募集要項）

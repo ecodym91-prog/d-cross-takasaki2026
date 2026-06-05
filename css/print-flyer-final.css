@@ -188,6 +188,18 @@
   transform: translateY(3mm);
 }
 
+/* ===== 表面 KEY MESSAGE BOX 直下の支援金注釈（8pt 下限） ===== */
+.page-front .keymsg-inner .keymsg-note {
+  margin: 1.5mm 0 0 !important;
+  font-family: var(--font-ja);
+  font-size: 8pt !important;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.92);
+  text-align: left;
+}
+
 /* ===== 裏面 BACK CTA: 1つ目の <strong>（選考要件・最新情報）は黒・下線なしに戻す ===== */
 .page-back .back-cta-main strong:first-of-type {
   color: var(--black) !important;
