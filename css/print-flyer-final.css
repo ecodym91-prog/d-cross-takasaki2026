@@ -227,7 +227,7 @@
 /* ===== 「円」右上の ※ マーカー（円文字に直接付与する superscript 方式） ===== */
 .page-front .keymsg-amount-mark {
   display: inline-block;
-  font-size: 7pt;
+  font-size: 8pt;
   font-weight: 700;
   color: var(--text-light);
   line-height: 1;
