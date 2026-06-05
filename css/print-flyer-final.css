@@ -208,7 +208,7 @@
   display: block;
 }
 
-/* ===== 広告審査番号（フッター最下部・6pt 例外・左詰め） ===== */
+/* ===== 広告審査番号（フッター最下部・6pt 例外・右詰め） ===== */
 .footer-meta .footer-ad-review {
   margin: 1.5mm 0 0 !important;
   font-family: var(--font-en) !important;
@@ -216,6 +216,6 @@
   font-weight: 500 !important;
   color: var(--text-light) !important;
   letter-spacing: 0.06em !important;
-  text-align: left !important;
+  text-align: right !important;
   line-height: 1.3 !important;
 }
