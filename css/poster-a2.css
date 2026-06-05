@@ -325,7 +325,7 @@ img { max-width: 100%; display: block; }
   display: inline-block;
   font-size: 14pt;
   font-weight: 800;
-  color: var(--dc-yellow);
+  color: rgba(255, 255, 255, 0.92);
   line-height: 1;
   vertical-align: super;
   margin-left: 1mm;

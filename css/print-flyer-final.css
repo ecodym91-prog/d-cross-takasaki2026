@@ -215,7 +215,7 @@
   display: inline-block;
   font-size: 7pt;
   font-weight: 700;
-  color: var(--dc-magenta);
+  color: var(--text-light);
   line-height: 1;
   vertical-align: super;
   margin-left: 0.3mm;
