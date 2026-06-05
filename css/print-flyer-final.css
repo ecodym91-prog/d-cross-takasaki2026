@@ -111,7 +111,13 @@
   bottom: auto !important;
   right: 8mm !important;
   transform: none !important;
-  width: 24mm !important;
+  width: 20mm !important;
+  height: auto !important;
+}
+.footer-meta .footer-akatsuki img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
 }
 /* 問い合わせ先は一行表示（途中で折り返さない） */
 .footer-meta .footer-contact {
