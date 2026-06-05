@@ -320,6 +320,17 @@ img { max-width: 100%; display: block; }
   margin-left: 3mm;
   vertical-align: middle;
 }
+/* 「最大100万円」右上の ※ マーカー（注釈参照記号） */
+.keymsg-amount { position: relative; }
+.keymsg-amount-mark {
+  position: absolute;
+  top: -2mm;
+  right: -5mm;
+  font-size: 14pt;
+  font-weight: 800;
+  color: var(--dc-yellow);
+  line-height: 1;
+}
 /* KEY MESSAGE 直下の支援金注釈（14pt 下限） */
 .keymsg-note {
   margin: 5mm 0 0;
