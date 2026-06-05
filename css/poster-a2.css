@@ -586,11 +586,17 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.02em;
   line-height: 1.55;
 }
+/* AKATSUKIロゴ：問い合わせ先行（メールアドレス）の右側に配置 */
 .footer-akatsuki {
   position: absolute;
-  right: 8mm;
-  bottom: 68mm;
-  width: 56mm;
+  right: 22mm;
+  top: 4mm;
+  bottom: auto;
+  width: 42mm;
+}
+/* 問い合わせ先テキストがロゴと被らないよう右余白を確保 */
+.footer-meta .footer-contact {
+  padding-right: 48mm;
 }
 .footer-akatsuki img { width: 100%; }
 
