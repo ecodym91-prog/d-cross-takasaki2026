@@ -228,18 +228,34 @@
   display: none !important;
 }
 
-/* ===== 表面 HERO content を少し下方向にシフト（padding-top 増） ===== */
+/* ===== 表面 HERO content：要素別に位置調整 ===== */
 .page-front .hero {
   padding-top: 14mm !important;
 }
+/* 「混ざれ、そして起き上がれ」を少しだけ上に */
+.page-front .hero-catch-main {
+  transform: translateY(-3mm);
+}
+/* 「高崎発、PoC・事業化支援プログラム始動」をさらに1行分下へ */
+.page-front .hero-catch-sub {
+  transform: translateY(5mm);
+}
 
-/* ===== 表面 AKATSUKI ロゴを拡大＋下方向。footer-note は被らないよう右パディング確保 ===== */
+/* ===== 表面 AKATSUKI ロゴはアスペクト保持して 20mm に戻す。footer-note は重なり回避用に右パディング確保 ===== */
 .page-front .footer-meta .footer-akatsuki {
-  width: 28mm !important;
+  width: 20mm !important;
+  height: auto !important;
   top: 7mm !important;
 }
+.page-front .footer-meta .footer-akatsuki img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
 .page-front .footer-meta .footer-note {
-  padding-right: 34mm;
+  padding-right: 28mm;
+  font-size: 10pt !important;
+  line-height: 1.5 !important;
 }
 
 /* ===== 裏面：問い合わせ先 + AKATSUKI ロゴ + K26 を均等に1行分下へ ===== */
@@ -252,9 +268,9 @@
   visibility: hidden !important;
 }
 
-/* ===== 表面 HERO タグライン: 視覚的に少し下へ（他配置は不変） ===== */
+/* ===== 表面 HERO タグライン: 視覚的に3行分下方向へ（他配置は不変） ===== */
 .page-front .hero-tagline {
-  transform: translateY(3mm);
+  transform: translateY(18mm);
 }
 
 /* ===== 「円」右上の ※ マーカー（円文字に直接付与する superscript 方式） ===== */
