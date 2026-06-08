@@ -237,7 +237,7 @@
   transform: translateY(-5mm);
   font-size: 22pt !important;       /* 34pt → 22pt（HERO幅内に収まるサイズ） */
   white-space: nowrap !important;   /* 1行強制 */
-  margin-left: 10mm !important;     /* 少し右へオフセット */
+  margin-left: 17mm !important;     /* 10mm → 17mm（1文字分右） */
 }
 /* D-CROSS ロゴ（クロスマーク無し SVG）：もう少し縮小 + 右にシフト + 下方向 */
 .page-front .hero-logo-img {
@@ -245,7 +245,13 @@
 }
 .page-front .hero-logo-wrap {
   margin-left: 10mm !important;      /* 18mm → 10mm（ちょい左） */
-  margin-top: 6mm !important;
+  margin-top: 12mm !important;       /* 6mm → 12mm（少し下） */
+}
+
+/* キービジュアルの ×クロスバーを少し縮小 */
+.page-front .hero .hero-cross-bar {
+  width: 90mm !important;            /* 110mm → 90mm */
+  height: 4mm !important;            /* 5mm → 4mm */
 }
 
 /* ===== 表面 AKATSUKI ロゴはアスペクト保持して 20mm に戻す。footer-note は重なり回避用に右パディング確保 ===== */
@@ -297,10 +303,10 @@
 /* ===== 裏面：footer-contact 内のインライン D-CROSS ロゴ ===== */
 .page-back .footer-meta .footer-contact .footer-inline-logo {
   display: inline-block;
-  height: 14mm;        /* 7mm → 14mm（2倍） */
+  height: 10mm;        /* 14mm → 10mm（縮小・K26 が見切れないように） */
   width: auto;
   vertical-align: middle;
-  margin-left: 7mm;    /* 3mm → 7mm（もう少し右） */
+  margin-left: 7mm;
 }
 
 /* ===== 表面 HERO タグライン: 視覚的に3行分下方向へ（他配置は不変） ===== */
