@@ -217,6 +217,20 @@
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: left;
+  visibility: hidden;  /* 文字のみ非表示・配置は維持 */
+}
+
+/* ===== 表面のみ：footer-contact は非表示（文字のみ・スペース維持）、K26 は完全削除 ===== */
+.page-front .footer-meta .footer-contact {
+  visibility: hidden !important;
+}
+.page-front .footer-meta .footer-ad-review {
+  display: none !important;
+}
+
+/* ===== 裏面のみ：footer-note は文字のみ非表示・配置は維持 ===== */
+.page-back .footer-meta .footer-note {
+  visibility: hidden !important;
 }
 
 /* ===== 表面 HERO タグライン: 視覚的に少し下へ（他配置は不変） ===== */
