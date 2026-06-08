@@ -232,13 +232,16 @@
 .page-front .hero {
   padding-top: 14mm !important;
 }
-/* 「混ざれ、そして起き上がれ」を少しだけ上に */
-.page-front .hero-catch-main {
-  transform: translateY(-3mm);
+/* hero-catch を flex column-reverse にして main / sub の視覚順だけ入れ替え（サイズは維持） */
+.page-front .hero-catch {
+  display: flex !important;
+  flex-direction: column-reverse !important;
 }
-/* 「高崎発、PoC・事業化支援プログラム始動」をさらに1行分下へ */
+.page-front .hero-catch-main {
+  transform: none;
+}
 .page-front .hero-catch-sub {
-  transform: translateY(5mm);
+  transform: none;
 }
 
 /* ===== 表面 AKATSUKI ロゴはアスペクト保持して 20mm に戻す。footer-note は重なり回避用に右パディング確保 ===== */
