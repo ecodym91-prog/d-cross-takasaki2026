@@ -244,7 +244,7 @@
   max-width: 100mm !important;       /* 116 → 100mm（さらに縮小） */
 }
 .page-front .hero-logo-wrap {
-  margin-left: 18mm !important;      /* 0 → 18mm（右にシフト） */
+  margin-left: 10mm !important;      /* 18mm → 10mm（ちょい左） */
   margin-top: 6mm !important;
 }
 
@@ -297,10 +297,10 @@
 /* ===== 裏面：footer-contact 内のインライン D-CROSS ロゴ ===== */
 .page-back .footer-meta .footer-contact .footer-inline-logo {
   display: inline-block;
-  height: 7mm;
+  height: 14mm;        /* 7mm → 14mm（2倍） */
   width: auto;
   vertical-align: middle;
-  margin-left: 3mm;
+  margin-left: 7mm;    /* 3mm → 7mm（もう少し右） */
 }
 
 /* ===== 表面 HERO タグライン: 視覚的に3行分下方向へ（他配置は不変） ===== */
