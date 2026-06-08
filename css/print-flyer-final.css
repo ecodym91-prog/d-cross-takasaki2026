@@ -245,7 +245,8 @@
 .page-front .footer-meta .footer-akatsuki {
   width: 30mm !important;   /* 20mm → 30mm（1.5倍） */
   height: auto !important;
-  top: 7mm !important;
+  top: 4.5mm !important;    /* 7mm → 4.5mm（0.5行上） */
+  right: 12mm !important;   /* 8mm → 12mm（少し左へ） */
 }
 .page-front .footer-meta .footer-akatsuki img {
   width: 100% !important;
@@ -257,7 +258,7 @@
   padding-right: 42mm;
   font-size: 9pt !important;
   line-height: 1.5 !important;
-  transform: translateY(-5mm);  /* 1行分上に視覚シフト・レイアウト不変 */
+  transform: translateY(-2.5mm);  /* 元-5mm → -2.5mm（0.5行下へ戻す） */
 }
 
 /* ===== 裏面：問い合わせ先 + AKATSUKI ロゴ + K26 を均等に1行分下へ ===== */
