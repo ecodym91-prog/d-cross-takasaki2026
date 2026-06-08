@@ -232,11 +232,7 @@
 .page-front .hero {
   padding-top: 14mm !important;
 }
-/* hero-catch を flex column-reverse にして main / sub の視覚順だけ入れ替え（サイズは維持） */
-.page-front .hero-catch {
-  display: flex !important;
-  flex-direction: column-reverse !important;
-}
+/* hero-catch-main / sub の位置・サイズはクラスのまま、テキストを HTML 側で入れ替え */
 .page-front .hero-catch-main {
   transform: none;
 }
