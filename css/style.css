@@ -4026,3 +4026,40 @@ footer .footer-akatsuki-link a:hover {
   .entry-cta-btn { min-width: 0; width: 100%; padding: 20px 24px; font-size: 16px; gap: 12px; }
   .entry-cta-arrow { font-size: 20px; }
 }
+
+/* ===== ENTRY ページ：COMING SOON ブロック ===== */
+.entry-coming-soon {
+  display: inline-block;
+  padding: 36px 56px;
+  background: linear-gradient(135deg, rgba(31,111,212,0.06) 0%, rgba(198,53,122,0.06) 100%);
+  border: 2px solid var(--dc-blue);
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(31,111,212,0.12);
+  max-width: 480px;
+}
+.entry-coming-soon-label {
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--gradient);
+  color: var(--white);
+  font-family: var(--font-en);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  border-radius: 60px;
+  margin-bottom: 16px;
+}
+.entry-coming-soon-date {
+  margin: 0;
+  font-family: var(--font-ja);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--dc-blue);
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+}
+@media (max-width: 720px) {
+  .entry-coming-soon { padding: 28px 24px; }
+  .entry-coming-soon-date { font-size: 18px; }
+}
