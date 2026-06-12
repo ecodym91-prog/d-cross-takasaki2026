@@ -195,7 +195,18 @@ header nav a:hover { color: var(--red); }
 .mobile-nav ul { display: flex; flex-direction: column; gap: 24px; }
 .mobile-nav a { font-size: 16px; font-weight: 500; color: var(--brown); }
 .mobile-nav-cta { margin-top: 32px; }
-.mobile-nav-cta .header-entry { display: block; text-align: center; padding: 14px; }
+.mobile-nav-cta .header-entry {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  background: var(--gradient);
+  color: var(--white) !important;
+  border: none;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  box-shadow: 0 6px 18px rgba(31,111,212,0.25);
+}
 
 /* ===== HERO ===== */
 .hero {
